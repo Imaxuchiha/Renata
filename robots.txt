@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portuguesewithrenata.com/sitemap.xml
