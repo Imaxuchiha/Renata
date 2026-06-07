@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Portuguese With Renata logo</title>
+  <desc id="desc">A warm speech bubble logo with the letter R and a small star.</desc>
+  <rect width="96" height="96" rx="24" fill="#fffaf2"/>
+  <path d="M22 24c0-7 6-13 13-13h26c7 0 13 6 13 13v24c0 7-6 13-13 13H45L27 76c-2 2-5 0-4-3l4-13c-3-2-5-6-5-11V24Z" fill="#26322f"/>
+  <path d="M35 28h16c8 0 14 5 14 13 0 6-3 10-8 12l9 14H54l-8-12h-1v12H35V28Zm10 9v10h6c3 0 5-2 5-5s-2-5-5-5h-6Z" fill="#fffaf2"/>
+  <path d="M70 16l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Z" fill="#b95b3a"/>
+  <path d="M19 14l1 4 4 1-4 1-1 4-1-4-4-1 4-1 1-4Z" fill="#b95b3a"/>
+</svg>

@@ -8,6 +8,19 @@ body {
   font-family: "Hanken Grotesk", system-ui, sans-serif;
 }
 
+img,
+svg {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+
 .font-display {
   font-family: "Fraunces", Georgia, serif;
 }
@@ -17,18 +30,89 @@ body {
 }
 
 .section-pad {
-  padding-block: clamp(4rem, 8vw, 7.5rem);
+  padding-block: clamp(3rem, 7vw, 6.5rem);
 }
 
 .wrap {
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1120px, calc(100% - 1.25rem));
   margin-inline: auto;
+}
+
+.site-header {
+  background: rgba(255, 250, 242, 0.94);
+}
+
+.header-row {
+  display: flex;
+  min-height: 4.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  padding-block: 0.65rem;
+}
+
+.site-brand {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.65rem;
+  color: #26322f;
+  text-decoration: none;
+}
+
+.site-brand img {
+  width: 2.55rem;
+  height: 2.55rem;
+  flex: 0 0 auto;
+}
+
+.site-brand span {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.05rem, 5vw, 1.28rem);
+  font-weight: 750;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.15rem;
+  scrollbar-width: none;
+}
+
+.site-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .hero-grid {
   display: grid;
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
+}
+
+.hero-grid h1 {
+  font-size: clamp(2.05rem, 9vw, 4.8rem);
+  line-height: 1.03;
+}
+
+.hero-grid h1 > span {
+  display: block;
+}
+
+main h2 {
+  font-size: clamp(2rem, 8vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.path-card h3,
+.service-card h3,
+.testimonial-card h3 {
+  font-size: clamp(1.45rem, 6vw, 1.95rem);
+  line-height: 1.08;
 }
 
 .soft-shadow {
@@ -46,6 +130,7 @@ body {
   font-weight: 800;
   line-height: 1;
   transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -78,6 +163,7 @@ body {
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
+  line-height: 1.25;
 }
 
 .image-frame {
@@ -132,9 +218,14 @@ body {
 }
 
 .nav-link {
-  color: rgba(38, 50, 47, 0.78);
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: rgba(38, 50, 47, 0.06);
+  color: rgba(38, 50, 47, 0.82);
   font-size: 0.95rem;
   font-weight: 800;
+  padding: 0.58rem 0.82rem;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -154,6 +245,50 @@ body {
 .input:focus {
   border-color: #b95b3a;
   box-shadow: 0 0 0 3px rgba(185, 91, 58, 0.14);
+}
+
+.faq-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.review-stars {
+  color: #b95b3a;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.footer-meta {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.footer-meta a {
+  color: #fffaf2;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.mobile-sticky-cta {
+  position: fixed;
+  right: 0.75rem;
+  bottom: 0.65rem;
+  left: 0.75rem;
+  z-index: 70;
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  background: #b95b3a;
+  color: #fffaf2;
+  padding: 0.78rem 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 16px 34px rgba(60, 48, 35, 0.22);
 }
 
 .whatsapp-popup {
@@ -190,14 +325,54 @@ body {
   transform: translateY(0);
 }
 
-@media (max-width: 860px) {
-  .desktop-nav {
-    display: none !important;
+@media (min-width: 861px) {
+  .wrap {
+    width: min(1120px, calc(100% - 2rem));
+  }
+
+  .header-row {
+    flex-wrap: nowrap;
+  }
+
+  .site-nav {
+    width: auto;
+    gap: 1.05rem;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .nav-link {
+    background: transparent;
+    padding: 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
+  }
+
+  .hero-grid h1 {
+    font-size: clamp(3.5rem, 5.5vw, 4.8rem);
+  }
+
+  .mobile-sticky-cta {
+    display: none;
   }
 }
 
-@media (min-width: 861px) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
+@media (max-width: 520px) {
+  body {
+    padding-bottom: 4.25rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .site-nav .btn {
+    width: auto;
+  }
+
+  .section-pad {
+    padding-block: 2.75rem;
   }
 }
