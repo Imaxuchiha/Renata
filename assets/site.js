@@ -1,6 +1,22 @@
 const popup = document.querySelector("[data-whatsapp-popup]");
 const popupClose = document.querySelector("[data-whatsapp-close]");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const siteNav = document.querySelector("[data-site-nav]");
 let popupShown = sessionStorage.getItem("renataWhatsAppPopupClosed") === "true";
+
+menuToggle?.addEventListener("click", () => {
+  const isOpen = siteNav?.classList.toggle("is-open") || false;
+  document.body.classList.toggle("menu-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+siteNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    siteNav.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  });
+});
 
 function showPopupAtScrollDepth() {
   if (!popup || popupShown) return;
@@ -42,6 +58,11 @@ document.querySelectorAll("[data-contact-form]").forEach((form) => {
   });
 });
 
-if (window.lucide) {
-  window.lucide.createIcons();
+function createIconsWhenReady() {
+  if (window.lucide?.createIcons) {
+    window.lucide.createIcons();
+  }
 }
+
+createIconsWhenReady();
+window.addEventListener("load", createIconsWhenReady);
