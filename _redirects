@@ -1,5 +1,13 @@
-# Oude Engelstalige structuur -> nieuwe PT-BR structuur
-/kids-language-lessons.html   /escola.html    301
-/learn-portuguese.html        /adultos.html   301
-/reviews.html                 /sobre.html     301
-/en/index.html                /en/            301
+# Oude Engelstalige structuur (juni 2026)
+/kids-language-lessons.html   /free.html      301
+/learn-portuguese.html        /pricing.html   301
+/reviews.html                 /about.html     301
+
+# Kortstondige PT-BR-structuur (nooit live geweest; paden veiligheidshalve afgevangen)
+/escola.html                  /free.html      301
+/adultos.html                 /pricing.html   301
+/precos.html                  /pricing.html   301
+/sobre.html                   /about.html     301
+/materiais.html               /free.html      301
+/obrigada.html                /thanks.html    301
+/en/*                         /:splat         301
