@@ -2,6 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Tailwind's preflight zet dit ook, maar dan pas nadat de CDN geladen is.
+   Expliciet hier houdt de layout heel als die traag of geblokkeerd is. */
 *,
 *::before,
 *::after {
@@ -9,13 +11,9 @@ html {
 }
 
 body {
-  color: #101723;
-  background: #f7eadf;
+  color: #26322f;
+  background: #fffaf2;
   font-family: "Hanken Grotesk", system-ui, sans-serif;
-}
-
-body.menu-open {
-  overflow: hidden;
 }
 
 img,
@@ -32,7 +30,7 @@ h4 {
 }
 
 .font-display {
-  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  font-family: "Fraunces", Georgia, serif;
 }
 
 .font-zh {
@@ -40,26 +38,30 @@ h4 {
 }
 
 .section-pad {
-  padding-block: clamp(2.2rem, 7vw, 6rem);
+  padding-block: clamp(3rem, 7vw, 6.5rem);
 }
 
 .wrap {
-  width: min(1120px, calc(100% - 1rem));
+  width: min(1120px, calc(100% - 1.25rem));
   margin-inline: auto;
 }
 
 .site-header {
-  background: #f7eadf;
+  background: rgba(255, 250, 242, 0.94);
 }
 
 .header-row {
   position: relative;
   display: flex;
-  min-height: 4rem;
+  min-height: 4.5rem;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding-block: 0.75rem;
+  gap: 0.65rem;
+  padding-block: 0.65rem;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 .site-brand {
@@ -67,41 +69,44 @@ h4 {
   min-width: 0;
   align-items: center;
   gap: 0.65rem;
-  color: #101723;
+  color: #26322f;
   text-decoration: none;
 }
 
 .site-brand img {
-  width: 3rem;
-  height: 3rem;
+  width: 2.55rem;
+  height: 2.55rem;
   flex: 0 0 auto;
-  transform: rotate(-3deg);
 }
 
 .site-brand span {
-  font-size: clamp(0.95rem, 4vw, 1.06rem);
-  font-weight: 950;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.05rem, 5vw, 1.28rem);
+  font-weight: 750;
   line-height: 1;
-  text-transform: uppercase;
 }
 
+/* Onder 861px klapt de navigatie uit in plaats van horizontaal te scrollen.
+   Een scrollende balk zet zijn links buiten de viewport en zakt daarmee door
+   de responsive-poort; boven 861px is dit weer gewoon de rij uit het ontwerp. */
 .menu-toggle {
   display: inline-flex;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   align-items: center;
   justify-content: center;
   border: 0;
   background: transparent;
-  color: #050910;
+  color: #26322f;
+  cursor: pointer;
 }
 
 .menu-toggle-lines,
 .menu-toggle-lines::before,
 .menu-toggle-lines::after {
   display: block;
-  width: 1.75rem;
-  height: 0.16rem;
+  width: 1.6rem;
+  height: 0.14rem;
   border-radius: 999px;
   background: currentColor;
   content: "";
@@ -118,50 +123,37 @@ h4 {
 }
 
 .menu-toggle-lines::before {
-  top: -0.55rem;
+  top: -0.5rem;
 }
 
 .menu-toggle-lines::after {
-  top: 0.55rem;
+  top: 0.5rem;
 }
 
 .site-nav {
   position: absolute;
-  top: calc(100% + 0.45rem);
-  left: 0;
+  top: calc(100% + 0.4rem);
   right: 0;
+  left: 0;
   z-index: 60;
   display: none;
   flex-direction: column;
-  gap: 0.35rem;
-  border-radius: 22px;
-  background: #fffaf7;
-  padding: 0.75rem;
-  box-shadow: 0 22px 54px rgba(16, 23, 35, 0.16);
+  gap: 0.3rem;
+  border: 1px solid rgba(38, 50, 47, 0.12);
+  border-radius: 8px;
+  background: #fffaf2;
+  padding: 0.7rem;
+  box-shadow: 0 24px 60px rgba(60, 48, 35, 0.16);
 }
 
 .site-nav.is-open {
   display: flex;
 }
 
-.nav-link {
-  width: 100%;
-  border-radius: 12px;
-  color: #101723;
-  font-size: 1rem;
-  font-weight: 950;
-  padding: 0.75rem 0.85rem;
-  text-transform: uppercase;
-}
-
-.nav-link:hover {
-  color: #f0441b;
-}
-
 .hero-grid {
   display: grid;
-  gap: 0.55rem;
-  align-items: stretch;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
 }
 
 /* Zonder dit krijgt de grid-kolom een min-content-bodem: één lange knoptekst
@@ -170,25 +162,9 @@ h4 {
   min-width: 0;
 }
 
-.hero-card {
-  border-radius: 24px;
-  background: #fffaf7;
-  padding: clamp(1.55rem, 7vw, 3rem);
-}
-
-.hero-card .eyebrow {
-  color: #009f61;
-  letter-spacing: 0.06em;
-}
-
 .hero-grid h1 {
-  margin-top: 1rem;
-  color: #08111f;
-  font-size: clamp(2.28rem, 10vw, 5.35rem);
-  font-weight: 950;
-  letter-spacing: -0.035em;
-  line-height: 0.96;
-  text-transform: uppercase;
+  font-size: clamp(2.05rem, 9vw, 4.8rem);
+  line-height: 1.03;
 }
 
 .hero-grid h1 > span {
@@ -196,51 +172,37 @@ h4 {
 }
 
 .hero-grid h1 .accent {
-  color: #f0441b;
+  color: #b95b3a;
 }
 
 .hero-copy {
-  max-width: 43rem;
-  color: #455050;
-  font-size: clamp(1rem, 4.2vw, 1.18rem);
-  line-height: 1.6;
+  max-width: 42rem;
+  color: #52605a;
+  font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+  line-height: 1.7;
   overflow-wrap: break-word;
 }
 
-.hero-image-panel {
-  overflow: hidden;
-  border-radius: 8px 8px 24px 24px;
-  background: linear-gradient(150deg, #f1461b 0%, #d45e37 58%, #b9573d 100%);
-  padding: 1rem 1rem 0;
-}
-
-.hero-image-panel img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 640px;
-  object-fit: contain;
-  object-position: center bottom;
-}
-
+/* Geen kleur hier: de contactsectie staat op een donkere achtergrond en erft
+   daar wit. Zodra hier een kleur staat, valt die kop weg. */
 main h2 {
-  color: #101723;
+  font-family: "Fraunces", Georgia, serif;
   font-size: clamp(2rem, 8vw, 3.25rem);
-  font-weight: 950;
-  letter-spacing: -0.025em;
-  line-height: 1;
-  text-transform: uppercase;
+  font-weight: 750;
+  line-height: 1.05;
 }
 
+/* Geen font-size hier. Deze selector (0,1,1) wint van een Tailwind-utility als
+   text-xl (0,1,0), waardoor een bewust kleine kop in een smalle kaart alsnog
+   groot werd en middenin een woord afbrak. Elke kaartkop zet zijn eigen maat. */
 .path-card h3,
 .service-card h3,
 .testimonial-card h3 {
-  font-size: clamp(1.45rem, 6vw, 1.95rem);
-  line-height: 1.08;
+  line-height: 1.12;
 }
 
 .soft-shadow {
-  box-shadow: 0 18px 44px rgba(16, 23, 35, 0.12);
+  box-shadow: 0 24px 60px rgba(60, 48, 35, 0.14);
 }
 
 .btn {
@@ -249,11 +211,10 @@ main h2 {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  border-radius: 7px;
-  padding: 0.88rem 1.15rem;
-  font-weight: 950;
+  border-radius: 999px;
+  padding: 0.82rem 1.18rem;
+  font-weight: 800;
   line-height: 1;
-  text-transform: uppercase;
   transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
   white-space: nowrap;
 }
@@ -263,37 +224,37 @@ main h2 {
 }
 
 .btn-primary {
-  background: #009f61;
+  background: #b95b3a;
   color: #fffaf2;
-  box-shadow: 0 12px 28px rgba(0, 159, 97, 0.24);
+  box-shadow: 0 14px 32px rgba(185, 91, 58, 0.28);
 }
 
 .btn-primary:hover {
-  background: #008653;
+  background: #9e482b;
 }
 
 .btn-secondary {
-  background: #08111f;
+  background: #26322f;
   color: #fffaf2;
 }
 
 .btn-ghost {
-  border: 1px solid rgba(16, 23, 35, 0.18);
-  color: #101723;
-  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(38, 50, 47, 0.2);
+  color: #26322f;
+  background: rgba(255, 255, 255, 0.48);
 }
 
 .eyebrow {
-  color: #8d4d2f;
+  color: #7c5f3d;
   font-size: 0.78rem;
-  font-weight: 950;
-  line-height: 1.25;
+  font-weight: 900;
   text-transform: uppercase;
+  line-height: 1.25;
 }
 
 .image-frame {
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 8px;
   background: #e6d9c6;
 }
 
@@ -307,9 +268,9 @@ main h2 {
 .path-card,
 .service-card,
 .testimonial-card {
-  border: 1px solid rgba(16, 23, 35, 0.12);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(38, 50, 47, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .card-link {
@@ -320,13 +281,13 @@ main h2 {
 }
 
 .card-link:hover {
-  border-color: rgba(240, 68, 27, 0.45);
-  box-shadow: 0 18px 42px rgba(16, 23, 35, 0.12);
+  border-color: rgba(185, 91, 58, 0.45);
+  box-shadow: 0 18px 42px rgba(60, 48, 35, 0.12);
   transform: translateY(-2px);
 }
 
 .card-link:focus-visible {
-  outline: 3px solid rgba(240, 68, 27, 0.45);
+  outline: 3px solid rgba(185, 91, 58, 0.45);
   outline-offset: 4px;
 }
 
@@ -334,27 +295,42 @@ main h2 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 950;
+  font-weight: 900;
 }
 
-.service-card.featured {
-  border-color: rgba(240, 68, 27, 0.45);
-  box-shadow: 0 18px 44px rgba(240, 68, 27, 0.12);
+.service-card.featured,
+.path-card.featured {
+  border-color: rgba(185, 91, 58, 0.55);
+  box-shadow: 0 18px 44px rgba(185, 91, 58, 0.13);
+}
+
+.nav-link {
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(38, 50, 47, 0.06);
+  color: rgba(38, 50, 47, 0.82);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.7rem 0.85rem;
+}
+
+.nav-link:hover {
+  color: #b95b3a;
 }
 
 .input {
   width: 100%;
-  border: 1px solid rgba(16, 23, 35, 0.18);
+  border: 1px solid rgba(38, 50, 47, 0.18);
   border-radius: 8px;
   background: #fffefb;
   padding: 0.85rem 0.95rem;
-  color: #101723;
+  color: #26322f;
   outline: none;
 }
 
 .input:focus {
-  border-color: #009f61;
-  box-shadow: 0 0 0 3px rgba(0, 159, 97, 0.14);
+  border-color: #b95b3a;
+  box-shadow: 0 0 0 3px rgba(185, 91, 58, 0.14);
 }
 
 .faq-grid {
@@ -386,9 +362,9 @@ main h2 {
   .tabel-responsive tbody tr {
     display: block;
     margin-bottom: 0.75rem;
-    border: 1px solid rgba(16, 23, 35, 0.12);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(38, 50, 47, 0.12);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.72);
     padding: 0.9rem 1.05rem;
   }
 
@@ -408,9 +384,9 @@ main h2 {
     content: attr(data-label);
     display: block;
     margin-bottom: 0.1rem;
-    color: #8d4d2f;
+    color: #7c5f3d;
     font-size: 0.7rem;
-    font-weight: 950;
+    font-weight: 900;
     letter-spacing: 0.05em;
     line-height: 1.3;
     text-transform: uppercase;
@@ -418,8 +394,8 @@ main h2 {
 }
 
 .review-stars {
-  color: #f0441b;
-  font-weight: 950;
+  color: #b95b3a;
+  font-weight: 900;
   letter-spacing: 0.04em;
 }
 
@@ -447,14 +423,13 @@ main h2 {
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  border-radius: 7px;
-  background: #009f61;
+  border-radius: 999px;
+  background: #b95b3a;
   color: #fffaf2;
   padding: 0.78rem 1rem;
-  font-weight: 950;
+  font-weight: 900;
   text-decoration: none;
-  text-transform: uppercase;
-  box-shadow: 0 16px 34px rgba(16, 23, 35, 0.2);
+  box-shadow: 0 16px 34px rgba(60, 48, 35, 0.22);
 }
 
 .whatsapp-popup {
@@ -483,7 +458,7 @@ main h2 {
   top: 1rem;
   z-index: 100;
   transform: translateY(-150%);
-  background: #08111f;
+  background: #26322f;
   color: #fffaf2;
   padding: 0.7rem 1rem;
   border-radius: 8px;
@@ -493,33 +468,9 @@ main h2 {
   transform: translateY(0);
 }
 
-@media (max-width: 520px) {
-  body {
-    padding-bottom: 4.25rem;
-  }
-
-  .btn {
-    width: 100%;
-    white-space: normal;
-    text-align: center;
-  }
-
-  .site-nav .btn {
-    width: 100%;
-  }
-
-  .section-pad {
-    padding-block: 2.2rem;
-  }
-}
-
 @media (min-width: 861px) {
   .wrap {
     width: min(1120px, calc(100% - 2rem));
-  }
-
-  .header-row {
-    min-height: 5rem;
   }
 
   .menu-toggle {
@@ -531,7 +482,9 @@ main h2 {
     display: flex;
     width: auto;
     flex-direction: row;
+    align-items: center;
     gap: 1.05rem;
+    border: 0;
     border-radius: 0;
     background: transparent;
     padding: 0;
@@ -540,26 +493,18 @@ main h2 {
 
   .nav-link {
     width: auto;
+    background: transparent;
     padding: 0;
     font-size: 0.95rem;
+    white-space: nowrap;
   }
 
   .hero-grid {
     grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
-    gap: clamp(2rem, 5vw, 5rem);
-  }
-
-  .hero-card {
-    border-radius: 28px;
   }
 
   .hero-grid h1 {
-    font-size: clamp(3.5rem, 5.7vw, 5.35rem);
-  }
-
-  .hero-image-panel {
-    border-radius: 28px;
-    padding: 1.5rem 1.5rem 0;
+    font-size: clamp(3.5rem, 5.5vw, 4.8rem);
   }
 
   .mobile-sticky-cta {
@@ -568,5 +513,26 @@ main h2 {
 
   .whatsapp-popup {
     bottom: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    padding-bottom: 4.25rem;
+  }
+
+  /* Zonder normal wrapping duwt een lange knoptekst de pagina buiten beeld. */
+  .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .site-nav .btn {
+    width: auto;
+  }
+
+  .section-pad {
+    padding-block: 2.75rem;
   }
 }

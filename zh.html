@@ -72,37 +72,37 @@
           <img src="images/portuguese-with-renata-logo.svg" width="96" height="96" alt="">
           <span>Renata</span>
         </a>
-        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
           <span class="menu-toggle-lines" aria-hidden="true"></span>
         </button>
-        <nav class="site-nav" aria-label="Main navigation" data-site-nav>
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="pricing.html">Portuguese Lessons</a>
-          <a class="nav-link" href="free.html">Kids Lessons</a>
-          <a class="nav-link" href="about.html">Reviews</a>
-          <a class="nav-link" href="#faq">FAQ</a>
+        <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
+          <a class="nav-link" href="index.html">首页</a>
+          <a class="nav-link" href="pricing.html">课程与价格</a>
+          <a class="nav-link" href="free.html">免费资料</a>
+          <a class="nav-link" href="about.html">关于 Renata</a>
+          <a class="nav-link" href="#faq">常见问题</a>
           <a class="btn btn-primary" href="#contact"><i data-lucide="message-circle" class="h-4 w-4"></i>免费咨询</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="section-pad">
+      <section class="section-pad bg-[#fffaf2]">
         <div class="wrap hero-grid">
-          <div class="hero-card soft-shadow">
-            <p class="eyebrow">我在葡萄牙帮你沟通</p>
-            <h1>
+          <div>
+            <p class="eyebrow mb-4 font-zh">我在葡萄牙帮你沟通</p>
+            <h1 class="font-zh font-black text-[#26322f]">
               <span>我帮你把</span>
               <span><span class="accent">葡萄牙生活</span></span>
               <span>说清楚</span>
             </h1>
-            <p class="hero-copy mt-5">我是 Renata，葡萄牙语母语者，英语沟通流利，并通过 HSK 4 汉语水平考试。我专注于日常生活、搬家适应和实际沟通。</p>
+            <p class="hero-copy mt-6 font-zh">我是 Renata，葡萄牙语母语者，英语沟通流利，并通过 HSK 4 汉语水平考试。我专注于日常生活、搬家适应和实际沟通。</p>
             <div class="mt-7 flex flex-wrap gap-3">
               <a class="btn btn-primary" href="#contact"><i data-lucide="calendar-check" class="h-4 w-4"></i>预约免费咨询</a>
               <a class="btn btn-ghost" href="pricing.html"><i data-lucide="languages" class="h-4 w-4"></i>英文葡语课程</a>
             </div>
           </div>
-          <figure class="hero-image-panel soft-shadow">
+          <figure class="image-frame soft-shadow aspect-[4/5]">
             <img src="images/renata-headshot.webp" srcset="images/renata-headshot-640.webp 480w, images/renata-headshot-960.webp 720w, images/renata-headshot.webp 900w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="900" height="1200" alt="Renata 微笑站在花树下" decoding="async" loading="eager" fetchpriority="high">
           </figure>
         </div>
