@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://portuguesewithrenata.com/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portuguesewithrenata.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portuguesewithrenata.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://portuguesewithrenata.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portuguesewithrenata.com/"/>
   </url>
   <url>
-    <loc>https://portuguesewithrenata.com/learn-portuguese.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://portuguesewithrenata.com/escola.html</loc>
+    <lastmod>2026-07-29</lastmod>
   </url>
   <url>
-    <loc>https://portuguesewithrenata.com/kids-language-lessons.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://portuguesewithrenata.com/adultos.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portuguesewithrenata.com/precos.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portuguesewithrenata.com/sobre.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portuguesewithrenata.com/materiais.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portuguesewithrenata.com/en/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portuguesewithrenata.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portuguesewithrenata.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://portuguesewithrenata.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portuguesewithrenata.com/"/>
   </url>
   <url>
     <loc>https://portuguesewithrenata.com/zh.html</loc>
-    <lastmod>2026-06-07</lastmod>
-  </url>
-  <url>
-    <loc>https://portuguesewithrenata.com/reviews.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-29</lastmod>
   </url>
 </urlset>

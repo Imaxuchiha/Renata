@@ -6,6 +6,10 @@
     <title>葡萄牙中文生活支持 | Portuguese With Renata</title>
     <meta name="description" content="我为在葡萄牙生活的中文用户提供日常沟通、预约、租房解释和搬家适应支持，服务里斯本、Oeiras 和 Cascais。">
     <link rel="canonical" href="https://portuguesewithrenata.com/zh.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://portuguesewithrenata.com/">
+    <link rel="alternate" hreflang="en" href="https://portuguesewithrenata.com/en/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://portuguesewithrenata.com/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://portuguesewithrenata.com/">
     <link rel="icon" href="images/portuguese-with-renata-logo.svg" type="image/svg+xml">
     <meta name="theme-color" content="#fffaf2">
     <meta property="og:title" content="葡萄牙中文生活支持">
@@ -73,9 +77,9 @@
         </button>
         <nav class="site-nav" aria-label="Main navigation" data-site-nav>
           <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="learn-portuguese.html">Portuguese Lessons</a>
-          <a class="nav-link" href="kids-language-lessons.html">Kids Lessons</a>
-          <a class="nav-link" href="reviews.html">Reviews</a>
+          <a class="nav-link" href="adultos.html">Portuguese Lessons</a>
+          <a class="nav-link" href="escola.html">Kids Lessons</a>
+          <a class="nav-link" href="sobre.html">Reviews</a>
           <a class="nav-link" href="#faq">FAQ</a>
           <a class="btn btn-primary" href="#contact"><i data-lucide="message-circle" class="h-4 w-4"></i>免费咨询</a>
         </nav>
@@ -95,7 +99,7 @@
             <p class="hero-copy mt-5">我是 Renata，葡萄牙语母语者，英语沟通流利，并通过 HSK 4 汉语水平考试。我专注于日常生活、搬家适应和实际沟通。</p>
             <div class="mt-7 flex flex-wrap gap-3">
               <a class="btn btn-primary" href="#contact"><i data-lucide="calendar-check" class="h-4 w-4"></i>预约免费咨询</a>
-              <a class="btn btn-ghost" href="learn-portuguese.html"><i data-lucide="languages" class="h-4 w-4"></i>英文葡语课程</a>
+              <a class="btn btn-ghost" href="adultos.html"><i data-lucide="languages" class="h-4 w-4"></i>英文葡语课程</a>
             </div>
           </div>
           <figure class="hero-image-panel soft-shadow">
@@ -214,7 +218,9 @@
             <h2>告诉我你现在卡在哪里。</h2>
             <p class="mt-5 text-lg leading-9 text-white/75">提交后会自动打开 WhatsApp，并把你的信息整理好，方便直接发送。</p>
           </div>
-          <form data-contact-form class="grid gap-4 rounded-lg bg-white p-5 text-[#26322f]">
+          <form name="contato-zh" method="POST" data-netlify="true" netlify-honeypot="empresa" action="/obrigada.html" data-track-form class="grid gap-4 rounded-lg bg-white p-5 text-[#26322f]">
+            <input type="hidden" name="form-name" value="contato-zh">
+            <p class="hidden"><label>请勿填写: <input name="empresa"></label></p>
             <label class="font-black">姓名<input class="input mt-2" name="name" autocomplete="name" required></label>
             <label class="font-black">邮箱<input class="input mt-2" name="email" type="email" autocomplete="email" required></label>
             <label class="font-black">你需要哪种服务？
@@ -241,9 +247,9 @@
         </div>
         <nav class="flex flex-wrap gap-5 text-sm font-bold text-white/70" aria-label="Footer navigation">
           <a href="index.html">Home</a>
-          <a href="learn-portuguese.html">Portuguese lessons</a>
-          <a href="kids-language-lessons.html">Kids lessons</a>
-          <a href="reviews.html">Reviews</a>
+          <a href="adultos.html">Portuguese lessons</a>
+          <a href="escola.html">Kids lessons</a>
+          <a href="sobre.html">Reviews</a>
           <a href="https://wa.me/351935328206">WhatsApp</a>
         </nav>
       </div>

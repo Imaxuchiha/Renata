@@ -1,16 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brazilian Portuguese & Kids Chinese in Lisbon | Renata</title>
-    <meta name="description" content="Brazilian Portuguese lessons, Chinese lessons for kids and Chinese relocation support in Lisbon, Cascais and Oeiras with Renata.">
+    <title>Português Ponte | Para brasileiros que vivem em Portugal | Renata</title>
+    <meta name="description" content="Seu sotaque fica. O português da escola e do trabalho vem junto. Aulas online para famílias e adultos brasileiros em Portugal, com uma professora brasileira que vive e negocia em Lisboa todos os dias.">
     <link rel="canonical" href="https://portuguesewithrenata.com/">
+    <link rel="alternate" hreflang="pt-BR" href="https://portuguesewithrenata.com/">
+    <link rel="alternate" hreflang="en" href="https://portuguesewithrenata.com/en/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://portuguesewithrenata.com/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://portuguesewithrenata.com/">
     <link rel="icon" href="images/portuguese-with-renata-logo.svg" type="image/svg+xml">
     <meta name="theme-color" content="#fffaf2">
-    <meta property="og:title" content="Portuguese With Renata">
-    <meta property="og:description" content="Brazilian Portuguese lessons, Chinese lessons for kids, and relocation support for life in Portugal.">
+    <meta property="og:title" content="Português Ponte | Para brasileiros que vivem em Portugal">
+    <meta property="og:description" content="Seu sotaque fica. O português da escola e do trabalho vem junto.">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
     <meta property="og:url" content="https://portuguesewithrenata.com/">
     <meta property="og:image" content="https://portuguesewithrenata.com/images/renata-headshot.webp">
     <meta name="twitter:card" content="summary_large_image">
@@ -30,72 +35,115 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Portuguese With Renata",
-        "url": "https://portuguesewithrenata.com/",
-        "logo": "https://portuguesewithrenata.com/images/portuguese-with-renata-logo.svg",
-        "areaServed": ["Lisbon", "Cascais", "Oeiras", "Paço de Arcos", "Portugal"],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Paço de Arcos",
-          "addressRegion": "Oeiras",
-          "addressCountry": "PT"
-        },
-        "knowsAbout": ["Brazilian Portuguese lessons", "Chinese lessons for children", "Mandarin Chinese", "Chinese relocation support in Portugal"]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "What does Portuguese With Renata offer?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "I offer Brazilian Portuguese lessons, Chinese lessons for children and Chinese-language relocation support for people living around Lisbon, Cascais, Oeiras and Paço de Arcos."
+            "@type": "WebSite",
+            "@id": "https://portuguesewithrenata.com/#website",
+            "url": "https://portuguesewithrenata.com/",
+            "name": "Português Ponte — Portuguese With Renata",
+            "inLanguage": "pt-BR",
+            "publisher": { "@id": "https://portuguesewithrenata.com/sobre.html#renata" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://portuguesewithrenata.com/sobre.html#renata",
+            "name": "Renata",
+            "jobTitle": "Professora de português brasileiro",
+            "url": "https://portuguesewithrenata.com/sobre.html",
+            "image": "https://portuguesewithrenata.com/images/renata-headshot.webp",
+            "nationality": "BR",
+            "knowsLanguage": ["pt-BR", "pt-PT", "en", "zh"],
+            "knowsAbout": [
+              "Português brasileiro",
+              "Diferenças entre português brasileiro e português europeu",
+              "Registro escrito escolar em Portugal",
+              "Adaptação linguística de brasileiros em Portugal",
+              "Mandarim"
+            ],
+            "homeLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Paço de Arcos",
+                "addressRegion": "Oeiras",
+                "addressCountry": "PT"
+              }
             }
           },
           {
-            "@type": "Question",
-            "name": "Is Renata teaching Brazilian Portuguese?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. I teach Brazilian Portuguese and explain Portugal-specific differences when they matter for daily life in Portugal."
+            "@type": "Service",
+            "@id": "https://portuguesewithrenata.com/#serviceponte",
+            "name": "Português Ponte",
+            "serviceType": "Aulas de português para brasileiros em Portugal",
+            "provider": { "@id": "https://portuguesewithrenata.com/sobre.html#renata" },
+            "areaServed": "Portugal",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://portuguesewithrenata.com/precos.html",
+              "availableLanguage": ["pt-BR", "en"]
             }
           },
           {
-            "@type": "Question",
-            "name": "How do I book a free call?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Use the contact form or WhatsApp button. The form opens WhatsApp with your details ready to send."
-            }
+            "@type": "FAQPage",
+            "@id": "https://portuguesewithrenata.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Meu filho é brasileiro e fala português. Por que ele precisaria de aula?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Porque a escola portuguesa avalia um registro escrito e um vocabulário que ninguém ensinou a ele. Alunos brasileiros ficam de fora do apoio de Português Língua Não Materna justamente porque o português é considerado a língua materna deles. O problema não é a fala da criança: é a falta de uma ponte entre duas normas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Vocês vão tirar o sotaque brasileiro do meu filho?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Não. O sotaque continua dele. O que entra é o registro que a escola cobra na prova escrita e o vocabulário do dia a dia português, sem substituir a forma como ele fala em casa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "As aulas são online ou presenciais?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Online, por vídeo. Isso permite turmas pequenas com crianças do mesmo ciclo mesmo que morem em concelhos diferentes, e funciona para famílias brasileiras em qualquer ponto de Portugal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Isso serve para o exame CIPLE de nacionalidade?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Não. O CIPLE avalia português europeu e não é o foco deste trabalho. Além disso, quem tem nacionalidade de um país de língua portuguesa costuma estar dispensado da prova de língua. Se o seu objetivo é o CIPLE, procure um professor de português europeu especializado nesse exame."
+                }
+              }
+            ]
           }
         ]
       }
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header sticky top-0 z-50 border-b border-stone-900/10 backdrop-blur">
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+    <header class="site-header">
       <div class="wrap header-row">
-        <a href="index.html" class="site-brand" aria-label="Portuguese With Renata home">
-          <img src="images/portuguese-with-renata-logo.svg" width="96" height="96" alt="">
-          <span>Renata</span>
+        <a class="site-brand" href="/">
+          <img src="images/portuguese-with-renata-logo.svg" width="48" height="48" alt="" aria-hidden="true">
+          <span>Português Ponte</span>
         </a>
-        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
-          <span class="menu-toggle-lines" aria-hidden="true"></span>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+          <span class="menu-toggle-lines"></span>
         </button>
-        <nav class="site-nav" aria-label="Main navigation" data-site-nav>
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="learn-portuguese.html">Brazilian Portuguese</a>
-          <a class="nav-link" href="kids-language-lessons.html">Kids Lessons</a>
-          <a class="nav-link font-zh" href="zh.html">中文服务</a>
-          <a class="nav-link" href="reviews.html">Reviews</a>
-          <a class="nav-link" href="#faq">FAQ</a>
-          <a class="btn btn-primary" href="#contact"><i data-lucide="message-circle" class="h-4 w-4"></i>Free Call</a>
+        <nav class="site-nav" id="site-nav" data-site-nav aria-label="Navegação principal">
+          <a class="nav-link" href="escola.html">Para a escola</a>
+          <a class="nav-link" href="adultos.html">Para adultos</a>
+          <a class="nav-link" href="precos.html">Preços</a>
+          <a class="nav-link" href="sobre.html">Sobre mim</a>
+          <a class="nav-link" href="materiais.html">Materiais</a>
+          <a class="btn btn-primary" href="#contato"><i data-lucide="message-circle" class="h-4 w-4"></i>Falar comigo</a>
         </nav>
       </div>
     </header>
@@ -104,23 +152,23 @@
       <section class="section-pad">
         <div class="wrap hero-grid">
           <div class="hero-card soft-shadow">
-            <p class="eyebrow">Learn with me</p>
+            <p class="eyebrow">Para brasileiros que vivem em Portugal</p>
             <h1>
-              <span>I teach</span>
-              <span><span class="accent">Brazilian</span></span>
-              <span><span class="accent">Portuguese</span></span>
-              <span>and Chinese</span>
-              <span>the fun way</span>
+              <span>Seu sotaque</span>
+              <span><span class="accent">fica.</span></span>
+              <span>O português</span>
+              <span>da escola</span>
+              <span>vem junto.</span>
             </h1>
-            <p class="hero-copy mt-5">I help kids, families and adults in Lisbon learn Brazilian Portuguese, beginner Mandarin and practical language for real life in Portugal.</p>
+            <p class="hero-copy mt-5">Sou brasileira, moro em Lisboa e negocio em português europeu todos os dias. Ensino famílias e adultos brasileiros a dominar o registro que a escola e o trabalho cobram aqui — sem trocar a forma como vocês falam em casa.</p>
             <div class="mt-7 flex flex-wrap gap-3">
-              <a class="btn btn-primary" href="kids-language-lessons.html"><i data-lucide="sparkles" class="h-4 w-4"></i>Lessons for kids</a>
-              <a class="btn btn-ghost" href="learn-portuguese.html"><i data-lucide="book-open" class="h-4 w-4"></i>Adult lessons</a>
-              <a class="btn btn-secondary font-zh" href="zh.html"><i data-lucide="languages" class="h-4 w-4"></i>中文服务</a>
+              <a class="btn btn-primary" href="escola.html"><i data-lucide="graduation-cap" class="h-4 w-4"></i>Meu filho na escola</a>
+              <a class="btn btn-ghost" href="adultos.html"><i data-lucide="briefcase" class="h-4 w-4"></i>Para o trabalho</a>
             </div>
+            <p class="mt-5 text-sm leading-6 text-[#66726c]">Começa com o <a class="font-bold underline" href="precos.html">Diagnóstico Ponte</a>: 60 minutos, 45&nbsp;€, e você sai com um relatório de uma página dizendo exatamente o que corrigir primeiro.</p>
           </div>
           <figure class="hero-image-panel soft-shadow">
-            <img src="images/renata-headshot.webp" srcset="images/renata-headshot-640.webp 480w, images/renata-headshot-960.webp 720w, images/renata-headshot.webp 900w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="900" height="1200" alt="Renata smiling outdoors, Portuguese teacher and Chinese-speaking relocation helper" decoding="async" loading="eager" fetchpriority="high">
+            <img src="images/renata-headshot.webp" srcset="images/renata-headshot-640.webp 480w, images/renata-headshot-960.webp 720w, images/renata-headshot.webp 900w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="900" height="1200" alt="Renata, professora brasileira de português, sorrindo ao ar livre" decoding="async" loading="eager" fetchpriority="high">
           </figure>
         </div>
       </section>
@@ -128,108 +176,143 @@
       <section class="section-pad bg-white">
         <div class="wrap">
           <div class="max-w-3xl">
-            <p class="eyebrow mb-3">Choose your path</p>
-            <h2>I can help you in three focused ways.</h2>
+            <p class="eyebrow mb-3">O problema que ninguém nomeia</p>
+            <h2>Seu filho fala português. E é exatamente por isso que ele não recebe ajuda.</h2>
           </div>
           <div class="mt-10 grid gap-5 lg:grid-cols-3">
-            <a class="path-card card-link p-7" href="kids-language-lessons.html" aria-label="View kids language lessons">
-              <i data-lucide="sparkles" class="mb-6 h-8 w-8 text-[#b95b3a]"></i>
-              <h3 class="font-display text-3xl font-bold">Language lessons for kids</h3>
-              <p class="mt-4 text-lg leading-7 text-[#52605a]">I teach Brazilian Portuguese and beginner Mandarin to children through play, stories, songs and conversation.</p>
-              <span class="card-cta mt-6 text-[#b95b3a]">View kids lessons <i data-lucide="arrow-right" class="h-4 w-4"></i></span>
-            </a>
-            <a class="path-card card-link p-7" href="learn-portuguese.html" aria-label="View Brazilian Portuguese lessons for adults">
-              <i data-lucide="coffee" class="mb-6 h-8 w-8 text-[#b95b3a]"></i>
-              <h3 class="font-display text-3xl font-bold">Brazilian Portuguese for adults</h3>
-              <p class="mt-4 text-lg leading-7 text-[#52605a]">I teach Brazilian Portuguese for daily confidence in Lisbon and Portugal.</p>
-              <span class="card-cta mt-6 text-[#b95b3a]">View adult lessons <i data-lucide="arrow-right" class="h-4 w-4"></i></span>
-            </a>
-            <a class="path-card card-link p-7" href="zh.html" aria-label="View Chinese relocation support">
-              <i data-lucide="map" class="mb-6 h-8 w-8 text-[#47705f]"></i>
-              <h3 class="font-zh text-3xl font-black">面向中国新移民的葡萄牙生活支持</h3>
-              <p class="mt-4 text-lg leading-7 text-[#52605a] font-zh">我可以用中文帮你理解预约、租房沟通、日常翻译和葡萄牙生活适应问题。</p>
-              <span class="card-cta mt-6 font-zh text-[#47705f]">查看中文服务 <i data-lucide="arrow-right" class="h-4 w-4"></i></span>
-            </a>
+            <article class="path-card p-7">
+              <p class="font-display text-5xl font-black text-[#f0441b]">88&nbsp;mil</p>
+              <h3 class="mt-3 font-display text-2xl font-bold">alunos brasileiros</h3>
+              <p class="mt-3 leading-7 text-[#52605a]">É a ordem de grandeza de estudantes brasileiros matriculados no ensino português. Vocês não são um caso isolado — são o maior grupo estrangeiro nas escolas do país.</p>
+            </article>
+            <article class="path-card featured p-7">
+              <p class="font-display text-5xl font-black text-[#f0441b]">0</p>
+              <h3 class="mt-3 font-display text-2xl font-bold">acesso ao apoio de PLNM</h3>
+              <p class="mt-3 leading-7 text-[#52605a]">Alunos brasileiros não são colocados em Português Língua Não Materna, porque o português é considerado a língua materna deles. A regra faz sentido no papel e deixa a criança sem rede na prática.</p>
+            </article>
+            <article class="path-card p-7">
+              <p class="font-display text-5xl font-black text-[#f0441b]">19%</p>
+              <h3 class="mt-3 font-display text-2xl font-bold">de cobertura, mesmo entre quem tem direito</h3>
+              <p class="mt-3 leading-7 text-[#52605a]">Entre os alunos estrangeiros que <em>têm</em> direito ao PLNM no ensino básico, só cerca de um em cada cinco chegou a frequentar a disciplina. A oferta não acompanhou a chegada das famílias.</p>
+            </article>
+          </div>
+          <div class="mt-8 max-w-3xl">
+            <p class="leading-7 text-[#52605a]">Na prática isso vira sempre a mesma cena: a professora diz que ele «escreve errado», o colega ri de uma palavra que em casa é normal, e a nota de Português cai. Não é falta de capacidade e não é preguiça. É que ninguém sentou com a criança para explicar que existem duas normas — e qual delas a prova cobra.</p>
+            <p class="mt-4 leading-7 text-[#52605a]">É esse o trabalho aqui. Chamo de <strong>Português Ponte</strong>: a ponte entre o português que vocês trouxeram e o português que Portugal avalia.</p>
           </div>
         </div>
       </section>
 
       <section class="section-pad bg-[#f2eadb]">
+        <div class="wrap">
+          <div class="max-w-3xl">
+            <p class="eyebrow mb-3">Escolha seu caminho</p>
+            <h2>Dois grupos, o mesmo problema em momentos diferentes.</h2>
+          </div>
+          <div class="mt-10 grid gap-5 lg:grid-cols-2">
+            <a class="path-card card-link p-7" href="escola.html" aria-label="Ver o programa para crianças na escola portuguesa">
+              <i data-lucide="graduation-cap" class="mb-6 h-8 w-8 text-[#b95b3a]"></i>
+              <h3 class="font-display text-3xl font-bold">Turma Ponte Júnior</h3>
+              <p class="mt-4 text-lg leading-7 text-[#52605a]">Para crianças brasileiras na escola portuguesa. Turmas de até seis alunos, separadas por ciclo, uma hora por semana ao vivo, mais a correção de um trabalho da escola por semana no WhatsApp.</p>
+              <p class="mt-4 font-display text-2xl font-black">69&nbsp;€ <span class="text-base font-bold text-[#66726c]">/ mês</span></p>
+              <span class="card-cta mt-6 text-[#b95b3a]">Ver o programa da escola <i data-lucide="arrow-right" class="h-4 w-4"></i></span>
+            </a>
+            <a class="path-card card-link p-7" href="adultos.html" aria-label="Ver o programa para adultos">
+              <i data-lucide="briefcase" class="mb-6 h-8 w-8 text-[#b95b3a]"></i>
+              <h3 class="font-display text-3xl font-bold">Turma Ponte Adultos</h3>
+              <p class="mt-4 text-lg leading-7 text-[#52605a]">Para quem precisa do registro formal no trabalho: entrevista de emprego, e-mail profissional, telefonema com Finanças ou AIMA, atendimento ao cliente português.</p>
+              <p class="mt-4 font-display text-2xl font-black">89&nbsp;€ <span class="text-base font-bold text-[#66726c]">/ mês</span></p>
+              <span class="card-cta mt-6 text-[#b95b3a]">Ver o programa de adultos <i data-lucide="arrow-right" class="h-4 w-4"></i></span>
+            </a>
+          </div>
+          <p class="mt-6 text-sm leading-6 text-[#66726c]">Todo mundo começa pelo mesmo lugar: o <a class="font-bold underline" href="precos.html">Diagnóstico Ponte</a>. Não é aula experimental grátis — é um trabalho pago de uma hora com entrega escrita, porque assim eu chego na primeira aula já sabendo o que precisa ser resolvido.</p>
+        </div>
+      </section>
+
+      <section class="section-pad bg-white">
         <div class="wrap grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div class="grid grid-cols-2 gap-4">
             <figure class="image-frame aspect-[4/5]">
-              <img src="images/renata-chinese-bridge-2025.webp" srcset="images/renata-chinese-bridge-2025-640.webp 640w, images/renata-chinese-bridge-2025-960.webp 960w, images/renata-chinese-bridge-2025.webp 1200w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="1200" height="817" alt="Renata speaking at the 2025 Chinese Bridge Chinese Proficiency Competition" decoding="async" loading="lazy">
+              <img src="images/renata-portrait-event.webp" srcset="images/renata-portrait-event-640.webp 640w, images/renata-portrait-event-960.webp 960w" sizes="(max-width: 860px) calc(50vw - 1.5rem), 260px" width="960" height="1200" alt="Renata num evento em Lisboa" decoding="async" loading="lazy">
             </figure>
             <figure class="image-frame mt-10 aspect-[4/5]">
-              <img src="images/renata-hubei-university-graduation.webp" srcset="images/renata-hubei-university-graduation-640.webp 375w, images/renata-hubei-university-graduation-960.webp 562w, images/renata-hubei-university-graduation.webp 702w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="702" height="1200" alt="Renata at the 2025 Hubei University graduation ceremony in China" decoding="async" loading="lazy">
+              <img src="images/renata-chinese-bridge-2025.webp" srcset="images/renata-chinese-bridge-2025-640.webp 640w, images/renata-chinese-bridge-2025-960.webp 960w" sizes="(max-width: 860px) calc(50vw - 1.5rem), 260px" width="1200" height="817" alt="Renata na competição Chinese Bridge de 2025" decoding="async" loading="lazy">
             </figure>
           </div>
           <div>
-            <p class="eyebrow mb-3">My background</p>
-            <h2>I connect Portuguese, English, Chinese and real life in Portugal.</h2>
+            <p class="eyebrow mb-3">Por que eu</p>
+            <h2>Sou brasileira e passo o dia inteiro em português europeu.</h2>
+            <p class="mt-5 leading-7 text-[#52605a]">Não sou uma professora portuguesa a corrigir brasileiros, e também não sou uma professora brasileira que dá aula do Brasil sem nunca ter lidado com uma professora daqui. Faço o atendimento a clientes de uma empresa em Lisboa: negocio, escrevo e resolvo problemas em português europeu todos os dias, com o meu sotaque brasileiro intacto. É exatamente isso que ensino.</p>
             <div class="mt-7 grid gap-4 sm:grid-cols-3">
               <div class="path-card p-5">
-                <h3 class="font-display text-2xl font-bold">Native Brazilian Portuguese</h3>
-                <p class="mt-2 text-[#52605a]">I teach Brazilian Portuguese clearly and explain Portugal-specific differences when they matter.</p>
+                <h3 class="font-display text-2xl font-bold">Português brasileiro nativo</h3>
+                <p class="mt-2 text-[#52605a]">Ensino a norma falada de verdade — <em>você</em>, <em>a gente</em>, próclise — e marco separadamente o que muda na escrita.</p>
               </div>
               <div class="path-card p-5">
-                <h3 class="font-display text-2xl font-bold">HSK 4, 210</h3>
-                <p class="mt-2 text-[#52605a]">I use my Chinese background for everyday conversation and relocation support.</p>
+                <h3 class="font-display text-2xl font-bold">Vivo em Oeiras</h3>
+                <p class="mt-2 text-[#52605a]">Conheço o vocabulário da escola, do centro de saúde e do balcão, porque uso todos eles.</p>
               </div>
               <div class="path-card p-5">
-                <h3 class="font-display text-2xl font-bold">Kids-Friendly Positioning</h3>
-                <p class="mt-2 text-[#52605a]">I keep children engaged with music, stories, games and confidence-first speaking practice.</p>
+                <h3 class="font-display text-2xl font-bold">Mandarim, HSK&nbsp;4</h3>
+                <p class="mt-2 text-[#52605a]">Já aprendi uma língua difícil do zero como adulta. Sei o que é travar na hora de falar.</p>
               </div>
             </div>
-            <p class="mt-6 text-sm leading-6 text-[#66726c]">My Chinese background includes <a class="font-bold underline" href="https://www.chinesetest.cn/HSK/4" target="_blank" rel="noopener">HSK Level 4</a>, <a class="font-bold underline" href="https://en.moe.gov.cn/news/press_releases/202509/t20250901_1411336.html" target="_blank" rel="noopener">Chinese Bridge 2025</a> and study experience connected to <a class="font-bold underline" href="https://eng.hubu.edu.cn/" target="_blank" rel="noopener">Hubei University</a>.</p>
+            <p class="mt-6 text-sm leading-6 text-[#66726c]">Sobre o mandarim eu sou honesta: o HSK&nbsp;4 me permite conversar e acompanhar alguém num balcão, não dar aula de gramática em chinês. <a class="font-bold underline" href="sobre.html">Minha história completa está aqui.</a></p>
           </div>
         </div>
       </section>
 
-      <section id="faq" class="section-pad bg-white">
+      <section id="faq" class="section-pad bg-[#f2eadb]">
         <div class="wrap">
           <div class="max-w-3xl">
-            <p class="eyebrow mb-3">Quick answers</p>
-            <h2>Frequently asked questions.</h2>
+            <p class="eyebrow mb-3">Respostas rápidas</p>
+            <h2>Perguntas que toda família brasileira me faz.</h2>
           </div>
-          <div class="faq-grid mt-10 md:grid-cols-3">
+          <div class="faq-grid mt-10 md:grid-cols-2">
             <article class="path-card p-6">
-              <h3 class="font-display text-2xl font-bold">What do I offer?</h3>
-              <p class="mt-3 leading-7 text-[#52605a]">I offer Brazilian Portuguese lessons, Chinese lessons for children and Chinese-language relocation support around Lisbon, Cascais, Oeiras and Paço de Arcos.</p>
+              <h3 class="font-display text-2xl font-bold">Meu filho fala português. Por que precisaria de aula?</h3>
+              <p class="mt-3 leading-7 text-[#52605a]">Porque a escola avalia um registro escrito e um vocabulário que ninguém ensinou a ele. E como o português conta como língua materna, ele fica de fora do apoio de PLNM. O problema não é a fala da criança — é a ausência de ponte entre duas normas.</p>
             </article>
             <article class="path-card p-6">
-              <h3 class="font-display text-2xl font-bold">Is it Brazilian Portuguese?</h3>
-              <p class="mt-3 leading-7 text-[#52605a]">Yes. I teach Brazilian Portuguese and explain Portugal-specific differences when they matter for daily life.</p>
+              <h3 class="font-display text-2xl font-bold">Vocês vão tirar o sotaque dele?</h3>
+              <p class="mt-3 leading-7 text-[#52605a]">Não, e essa é a regra da casa. O sotaque continua dele. O que entra é o registro que a prova cobra e o vocabulário do dia a dia daqui. Ninguém precisa deixar de soar brasileiro para tirar boa nota.</p>
             </article>
             <article class="path-card p-6">
-              <h3 class="font-display text-2xl font-bold">How do I start?</h3>
-              <p class="mt-3 leading-7 text-[#52605a]">Book a free call, choose the service and share your goal. The form opens WhatsApp with your message ready.</p>
+              <h3 class="font-display text-2xl font-bold">As aulas são online?</h3>
+              <p class="mt-3 leading-7 text-[#52605a]">Sim, por vídeo. Assim consigo juntar crianças do mesmo ciclo mesmo que morem em concelhos diferentes, e atender famílias brasileiras em qualquer ponto de Portugal.</p>
+            </article>
+            <article class="path-card p-6">
+              <h3 class="font-display text-2xl font-bold">Serve para o CIPLE / nacionalidade?</h3>
+              <p class="mt-3 leading-7 text-[#52605a]">Não. O CIPLE avalia português europeu e não é o meu foco — prefiro dizer isso do que vender algo que não entrego. E quem tem nacionalidade de um país de língua portuguesa costuma estar dispensado da prova de língua.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section-pad bg-[#26322f] text-white">
+      <section id="contato" class="section-pad bg-[#26322f] text-white">
         <div class="wrap grid gap-10 lg:grid-cols-[0.8fr_1fr]">
           <div>
-            <p class="eyebrow mb-3 text-[#e6c7aa]">Free call</p>
-            <h2>Tell me what you need help with.</h2>
-            <p class="mt-5 text-lg leading-8 text-white/75">Choose the service, add a few details, and I will reply on WhatsApp.</p>
+            <p class="eyebrow mb-3 text-[#e6c7aa]">Fale comigo</p>
+            <h2>Conte o que está acontecendo.</h2>
+            <p class="mt-5 text-lg leading-8 text-white/75">Escreva em duas linhas o que está travando — a nota, a professora, a entrevista, o balcão. Respondo em português, normalmente no mesmo dia.</p>
+            <p class="mt-6 text-white/60">Prefere WhatsApp? <a class="font-bold text-white underline" href="https://wa.me/351935328206">Manda mensagem direto.</a></p>
           </div>
-          <form data-contact-form class="grid gap-4 rounded-lg bg-white p-5 text-[#26322f]">
-            <label class="font-bold">Name<input class="input mt-2" name="name" autocomplete="name" required></label>
-            <label class="font-bold">Email<input class="input mt-2" name="email" type="email" autocomplete="email" required></label>
-            <label class="font-bold">Which service are you interested in?
-              <select class="input mt-2" name="service" required>
-                <option value="">Choose one</option>
-                <option>Kids Brazilian Portuguese or Chinese lessons</option>
-                <option>Brazilian Portuguese lessons for adults</option>
-                <option>Chinese relocation and translation support</option>
-                <option>Not sure yet</option>
+          <form name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa" action="/obrigada.html" data-track-form class="grid gap-4 rounded-lg bg-white p-5 text-[#26322f]">
+            <input type="hidden" name="form-name" value="contato">
+            <p class="hidden"><label>Não preencha: <input name="empresa"></label></p>
+            <label class="font-bold">Nome<input class="input mt-2" name="nome" autocomplete="name" required></label>
+            <label class="font-bold">E-mail<input class="input mt-2" name="email" type="email" autocomplete="email" required></label>
+            <label class="font-bold">O que você precisa?
+              <select class="input mt-2" name="assunto" required>
+                <option value="">Escolha uma opção</option>
+                <option>Meu filho na escola portuguesa</option>
+                <option>Português para o trabalho</option>
+                <option>Diagnóstico Ponte (45 €)</option>
+                <option>Ainda não sei</option>
               </select>
             </label>
-            <label class="font-bold">Message<textarea class="input mt-2 min-h-32" name="message" required></textarea></label>
-            <button class="btn btn-primary w-full" type="submit"><i data-lucide="send" class="h-4 w-4"></i>Book Your Free Strategy Call</button>
+            <label class="font-bold">Mensagem<textarea class="input mt-2 min-h-32" name="mensagem" required></textarea></label>
+            <button class="btn btn-primary w-full" type="submit"><i data-lucide="send" class="h-4 w-4"></i>Enviar</button>
           </form>
         </div>
       </section>
@@ -238,27 +321,26 @@
     <footer class="bg-[#171f1d] py-10 text-white">
       <div class="wrap flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
         <div>
-          <p class="font-display text-xl font-bold">Portuguese With Renata</p>
-          <p class="footer-meta mt-2">Paço de Arcos, Oeiras, Portugal<br>Website by <a href="https://www.adsvantage.nl/" target="_blank" rel="noopener">Adsvantage.nl</a></p>
+          <p class="font-display text-xl font-bold">Português Ponte — Renata</p>
+          <p class="footer-meta mt-2">Paço de Arcos, Oeiras, Portugal<br>Aulas online para todo o país<br>Site por <a href="https://www.adsvantage.nl/" target="_blank" rel="noopener">Adsvantage.nl</a></p>
         </div>
-        <nav class="flex flex-wrap gap-5 text-sm font-bold text-white/70" aria-label="Footer navigation">
-          <a href="kids-language-lessons.html">Kids language lessons Lisbon</a>
-          <a href="learn-portuguese.html">Brazilian Portuguese lessons Lisbon</a>
-          <a href="zh.html">中文服务</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="https://wa.me/351935328206">WhatsApp</a>
+        <nav class="flex flex-wrap gap-5 text-sm font-bold text-white/70" aria-label="Navegação do rodapé">
+          <a href="escola.html">Para a escola</a>
+          <a href="adultos.html">Para adultos</a>
+          <a href="precos.html">Preços</a>
+          <a href="sobre.html">Sobre mim</a>
+          <a href="materiais.html">Materiais gratuitos</a>
+          <a href="/en/">English</a>
+          <a class="font-zh" href="zh.html">中文</a>
         </nav>
       </div>
     </footer>
 
-    <aside data-whatsapp-popup class="whatsapp-popup">
-      <div class="rounded-lg border border-[#2fbf71]/30 bg-white p-4 text-[#26322f] soft-shadow">
-        <button data-whatsapp-close class="absolute right-3 top-3 rounded-full p-1 text-[#52605a]" aria-label="Close WhatsApp popup"><i data-lucide="x" class="h-5 w-5"></i></button>
-        <p class="pr-8 text-lg font-extrabold">Have questions? Chat with me directly!</p>
-        <a class="btn mt-4 w-full bg-[#25D366] text-[#06351e]" href="https://wa.me/351935328206"><i data-lucide="message-circle" class="h-4 w-4"></i>Open WhatsApp</a>
-      </div>
-    </aside>
-    <a class="mobile-sticky-cta" href="#contact"><i data-lucide="message-circle" class="h-4 w-4"></i>Free Call</a>
-    <script src="assets/site.js"></script>
+    <a class="mobile-sticky-cta" href="#contato"><i data-lucide="message-circle" class="h-4 w-4"></i>Falar comigo</a>
+
+    <script src="assets/site.js" defer></script>
+    <script>
+      window.addEventListener("load", () => window.lucide?.createIcons());
+    </script>
   </body>
 </html>
