@@ -7,7 +7,8 @@
     <meta name="description" content="Your message has arrived. Renata answers personally, usually the same day.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://portuguesewithrenata.com/thanks.html">
-    <link rel="icon" href="images/portuguese-with-renata-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo-mark.svg">
     <meta name="theme-color" content="#fffaf2">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-74WWL8S9DB"></script>
     <script>
@@ -30,7 +31,7 @@
     <header class="site-header">
       <div class="wrap header-row">
         <a class="site-brand" href="/">
-          <img src="images/portuguese-with-renata-logo.svg" width="48" height="48" alt="" aria-hidden="true">
+          <img src="images/logo-mark.svg" width="48" height="48" alt="" aria-hidden="true">
           <span>Portuguese With Renata</span>
         </a>
         <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
@@ -41,12 +42,13 @@
           <a class="nav-link" href="pricing.html">Lessons &amp; prices</a>
           <a class="nav-link" href="free.html">Free resources</a>
           <a class="nav-link" href="about.html">About Renata</a>
+          <a class="nav-link" href="interpreting.html">Interpreting</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="section-pad bg-[#fffaf2]">
+      <section class="reveal section-pad bg-[#fffaf2]">
         <div class="wrap">
           <div class="max-w-3xl">
             <p class="eyebrow mb-3">Message received</p>
@@ -60,7 +62,7 @@
         </div>
       </section>
 
-      <section class="section-pad bg-white">
+      <section class="reveal section-pad bg-white">
         <div class="wrap">
           <div class="max-w-3xl">
             <p class="eyebrow mb-3">While you wait</p>
@@ -88,13 +90,46 @@
           </div>
         </div>
       </section>
+
+      <!-- Vier foto's van Renata: de eis is dat elke landingspagina er minstens
+           vier heeft, zodat de site als een persoon voelt en niet als een merk. -->
+      <section class="section section--subtle">
+        <div class="wrap">
+          <div class="reveal" style="max-width:46rem;">
+            <p class="eyebrow">The person behind the lessons</p>
+            <h2>You are learning from someone, not something.</h2>
+            <p class="prose" style="margin-top:1.25rem;">Same teacher every week, who remembers what you got stuck on last time. Based in Oeiras, just outside Lisbon, teaching in the evenings.</p>
+          </div>
+          <div class="photo-strip reveal-group" style="margin-top:2rem;">
+            <figure class="frame frame--zoom">
+              <img src="images/renata-headshot-640.webp" width="480" height="640" alt="Renata smiling outdoors under blossoming trees" decoding="async" loading="lazy">
+              <figcaption>Lisbon, spring</figcaption>
+            </figure>
+            <figure class="frame frame--zoom">
+              <img src="images/renata-portret-640.webp" width="640" height="775" alt="Renata in conversation at a language event" decoding="async" loading="lazy">
+              <figcaption>At a language event</figcaption>
+            </figure>
+            <figure class="frame frame--zoom">
+              <img src="images/renata-natuur-640.webp" width="640" height="708" alt="Renata outdoors by a river gorge in Hubei" decoding="async" loading="lazy">
+              <figcaption>Travelling, Hubei</figcaption>
+            </figure>
+            <figure class="frame frame--zoom">
+              <img src="images/renata-cultuur-640.webp" width="640" height="796" alt="Renata in traditional dress during a cultural visit in Enshi" decoding="async" loading="lazy">
+              <figcaption>Enshi, cultural visit</figcaption>
+            </figure>
+          </div>
+          <div class="btn-row reveal" style="margin-top:2rem;">
+            <a class="btn btn-whatsapp" href="https://wa.me/351935328206?text=Hi%20Renata%2C%20I%27d%20like%20to%20learn%20Brazilian%20Portuguese."><i data-lucide="message-circle"></i>Message me on WhatsApp</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-[#171f1d] py-10 text-white">
       <div class="wrap flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
         <div>
           <p class="font-display text-xl font-bold">Portuguese With Renata</p>
-          <p class="footer-meta mt-2">Brazilian Portuguese, taught online<br>Based in Oeiras, Portugal<br>Website by <a href="https://www.adsvantage.nl/" target="_blank" rel="noopener">Adsvantage.nl</a></p>
+          <p class="footer-meta mt-2">Brazilian Portuguese, taught online<br>Based in Oeiras, Portugal<br>Website by <a href="https://adsvantage.pt/" target="_blank" rel="noopener">Adsvantage.pt</a></p>
         </div>
         <nav class="flex flex-wrap gap-5 text-sm font-bold text-white/70" aria-label="Footer navigation">
           <a href="/#why">Why Brazilian Portuguese</a>
@@ -110,5 +145,8 @@
     <script>
       window.addEventListener("load", () => window.lucide?.createIcons());
     </script>
+    <a class="wa-float" href="https://wa.me/351935328206?text=Hi%20Renata%2C%20I%27d%20like%20to%20learn%20Brazilian%20Portuguese." aria-label="Message Renata on WhatsApp">
+      <i data-lucide="message-circle"></i>WhatsApp
+    </a>
   </body>
 </html>

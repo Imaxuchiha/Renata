@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>葡萄牙中文生活支持 | Portuguese With Renata</title>
-    <meta name="description" content="我为在葡萄牙生活的中文用户提供日常沟通、预约、租房解释和搬家适应支持，服务里斯本、Oeiras 和 Cascais。">
+    <title>里斯本中文陪同翻译 | Portuguese With Renata</title>
+    <meta name="description" content="在里斯本、奥埃拉什和卡斯凯什陪你去看房、跑窗口、见老师和医生，把葡萄牙语现场说清楚。现场每小时 45 欧，远程每半小时 25 欧。不做公证和法律翻译。">
     <link rel="canonical" href="https://portuguesewithrenata.com/zh.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://portuguesewithrenata.com/">
-    <link rel="alternate" hreflang="en" href="https://portuguesewithrenata.com/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://portuguesewithrenata.com/zh.html">
-    <link rel="alternate" hreflang="x-default" href="https://portuguesewithrenata.com/">
-    <link rel="icon" href="images/portuguese-with-renata-logo.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="en" href="https://portuguesewithrenata.com/interpreting.html">
+    <link rel="alternate" hreflang="x-default" href="https://portuguesewithrenata.com/interpreting.html">
+    <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo-mark.svg">
     <meta name="theme-color" content="#fffaf2">
-    <meta property="og:title" content="葡萄牙中文生活支持">
-    <meta property="og:description" content="中文日常沟通、预约、租房解释和葡萄牙生活适应支持。">
+    <meta property="og:title" content="里斯本中文陪同翻译">
+    <meta property="og:description" content="葡萄牙语是我的母语，英语流利，中文足够把事情讲明白。看房、窗口、学校、诊所，我陪你去。">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
     <meta property="og:url" content="https://portuguesewithrenata.com/zh.html">
-    <meta property="og:image" content="https://portuguesewithrenata.com/images/renata-chinese-bridge-2025.webp">
+    <meta property="og:image" content="https://portuguesewithrenata.com/images/renata-headshot.jpeg">
+    <meta property="og:image:alt" content="Renata，在里斯本地区提供中文陪同翻译">
     <meta name="twitter:card" content="summary_large_image">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-74WWL8S9DB"></script>
     <script>
@@ -25,40 +27,86 @@
       gtag('js', new Date());
       gtag('config', 'G-74WWL8S9DB');
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,750&family=Hanken+Grotesk:wght@400;600;700;800;900&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="assets/site.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "我可以提供法律翻译吗？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "不提供法律、医学或宣誓翻译。我的服务专注于日常生活沟通、预约、租房解释和葡萄牙生活适应支持。"
+            "@type": "WebPage",
+            "@id": "https://portuguesewithrenata.com/zh.html#webpage",
+            "url": "https://portuguesewithrenata.com/zh.html",
+            "name": "里斯本中文陪同翻译",
+            "isPartOf": { "@id": "https://portuguesewithrenata.com/#website" },
+            "about": { "@id": "https://portuguesewithrenata.com/about.html#renata" },
+            "inLanguage": "zh-Hans"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://portuguesewithrenata.com/zh.html#service",
+            "name": "中文陪同翻译与生活沟通支持",
+            "serviceType": "陪同翻译、预约沟通、日常生活语言支持",
+            "provider": { "@id": "https://portuguesewithrenata.com/about.html#renata" },
+            "areaServed": [
+              { "@type": "City", "name": "里斯本" },
+              { "@type": "City", "name": "奥埃拉什" },
+              { "@type": "City", "name": "卡斯凯什" }
+            ],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://portuguesewithrenata.com/zh.html",
+              "availableLanguage": ["zh-Hans", "en", "pt-PT", "pt-BR"]
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "45",
+              "priceCurrency": "EUR",
+              "description": "现场陪同每小时 45 欧，最少两小时；远程沟通每半小时 25 欧。",
+              "availability": "https://schema.org/LimitedAvailability"
             }
           },
           {
-            "@type": "Question",
-            "name": "服务区域在哪里？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "服务重点是 Lisbon、Cascais、Oeiras、Paço de Arcos 和线上客户。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "如何预约免费咨询？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "填写页面表单或点击 WhatsApp 按钮，我会根据你的问题回复。"
-            }
+            "@type": "FAQPage",
+            "@id": "https://portuguesewithrenata.com/zh.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "可以翻译公证文件或法律文件吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "不可以。公证翻译、合同、法院和医疗文件都不在服务范围内，葡萄牙官方通常也要求有资质的宣誓翻译。我做的是现场口头沟通：看房、窗口办事、学校和日常杂事。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "你的中文到底什么水平？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "HSK 4，成绩 210，在湖北学习过，并参加过汉语桥比赛。这是扎实的日常水平：足够把对方的问题讲清楚，也能听出你的回答被误解了。但不是会议或法律口译的水平，我不会把它说成那样。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "费用怎么算？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "现场每小时 45 欧，最少两小时，里斯本、奥埃拉什和卡斯凯什范围内的交通已包含。远程电话或信息沟通每半小时 25 欧。时间通常在晚上和周末，因为白天我在上课。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "你在哪几种语言之间翻译？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "葡萄牙语是母语，英语流利，中文是桥梁。实际操作中是葡语转中文、葡语转英语、英语转中文，哪种组合能把事情办完就用哪种。"
+                }
+              }
+            ]
           }
         ]
       }
@@ -66,203 +114,292 @@
   </head>
   <body class="font-zh">
     <a class="skip-link" href="#main">跳到主要内容</a>
-    <header class="site-header sticky top-0 z-50 border-b border-stone-900/10 backdrop-blur">
+
+    <header class="site-header">
       <div class="wrap header-row">
-        <a href="index.html" class="site-brand" aria-label="Portuguese With Renata home">
-          <img src="images/portuguese-with-renata-logo.svg" width="96" height="96" alt="">
-          <span>Renata</span>
+        <a class="brand" href="zh.html">
+          <img src="images/logo-mark.svg" width="48" height="48" alt="" aria-hidden="true">
+          <span>Portuguese With Renata</span>
         </a>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
           <span class="menu-toggle-lines" aria-hidden="true"></span>
         </button>
-        <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
-          <a class="nav-link" href="index.html">首页</a>
-          <a class="nav-link" href="pricing.html">课程与价格</a>
-          <a class="nav-link" href="free.html">免费资料</a>
-          <a class="nav-link" href="about.html">关于 Renata</a>
+        <nav class="site-nav" id="site-nav" data-site-nav aria-label="主导航">
+          <a class="nav-link" href="#service">服务内容</a>
+          <a class="nav-link" href="#price">价格</a>
+          <a class="nav-link" href="#areas">服务区域</a>
           <a class="nav-link" href="#faq">常见问题</a>
-          <a class="btn btn-primary" href="#contact"><i data-lucide="message-circle" class="h-4 w-4"></i>免费咨询</a>
+          <a class="nav-link" href="index.html" style="font-family:var(--font-sans)">English</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/351935328206?text=%E4%BD%A0%E5%A5%BD%20Renata%EF%BC%8C%E6%88%91%E9%9C%80%E8%A6%81%E9%99%AA%E5%90%8C%E7%BF%BB%E8%AF%91%E3%80%82"><i data-lucide="message-circle"></i>WhatsApp</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="section-pad bg-[#fffaf2]">
+      <section class="hero">
         <div class="wrap hero-grid">
-          <div>
-            <p class="eyebrow mb-4 font-zh">我在葡萄牙帮你沟通</p>
-            <h1 class="font-zh font-black text-[#26322f]">
-              <span>我帮你把</span>
-              <span><span class="accent">葡萄牙生活</span></span>
-              <span>说清楚</span>
+          <div class="reveal">
+            <p class="eyebrow">里斯本地区 · 中文陪同翻译</p>
+            <h1>
+              <span>有人替你</span>
+              <span class="accent">把话说明白</span>
+              <span>的时候，事情就好办了。</span>
             </h1>
-            <p class="hero-copy mt-6 font-zh">我是 Renata，葡萄牙语母语者，英语沟通流利，并通过 HSK 4 汉语水平考试。我专注于日常生活、搬家适应和实际沟通。</p>
-            <div class="mt-7 flex flex-wrap gap-3">
-              <a class="btn btn-primary" href="#contact"><i data-lucide="calendar-check" class="h-4 w-4"></i>预约免费咨询</a>
-              <a class="btn btn-ghost" href="pricing.html"><i data-lucide="languages" class="h-4 w-4"></i>英文葡语课程</a>
+            <p class="lead" style="margin-top:1.5rem;">我是 Renata。葡萄牙语是我的母语，英语流利，中文足够把一件事讲清楚。看房、跑窗口、见老师、去诊所，我可以陪你一起去，当场把双方的意思对上。</p>
+            <div class="btn-row" style="margin-top:1.75rem;">
+              <a class="btn btn-whatsapp" href="https://wa.me/351935328206?text=%E4%BD%A0%E5%A5%BD%20Renata%EF%BC%8C%E6%88%91%E9%9C%80%E8%A6%81%E9%99%AA%E5%90%8C%E7%BF%BB%E8%AF%91%E3%80%82"><i data-lucide="message-circle"></i>用 WhatsApp 联系我</a>
+              <a class="btn btn-ghost" href="#price"><i data-lucide="euro"></i>看价格</a>
             </div>
+            <div class="badge-row">
+              <span class="badge"><i data-lucide="check"></i>葡语母语</span>
+              <span class="badge"><i data-lucide="check"></i>英语流利</span>
+              <span class="badge"><i data-lucide="check"></i>HSK 4</span>
+            </div>
+            <p class="fine" style="margin-top:1.25rem;">不做公证翻译、法律和医疗文件。做的是现场口头沟通，人在你旁边。</p>
           </div>
-          <figure class="image-frame soft-shadow aspect-[4/5]">
-            <img src="images/renata-headshot.webp" srcset="images/renata-headshot-640.webp 480w, images/renata-headshot-960.webp 720w, images/renata-headshot.webp 900w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="900" height="1200" alt="Renata 微笑站在花树下" decoding="async" loading="eager" fetchpriority="high">
+          <figure class="frame frame--tall frame--zoom reveal">
+            <img src="images/renata-headshot.webp" srcset="images/renata-headshot-640.webp 480w, images/renata-headshot-960.webp 720w, images/renata-headshot.webp 900w" sizes="(max-width: 900px) calc(100vw - 2rem), 460px" width="900" height="1200" alt="Renata 站在花树下微笑" decoding="async" loading="eager" fetchpriority="high">
           </figure>
         </div>
       </section>
 
-      <section class="section-pad bg-white">
+      <section id="service" class="section section--raised">
         <div class="wrap">
-          <div class="max-w-3xl">
-            <p class="eyebrow mb-3">你的实际问题</p>
-            <h2 class="text-4xl font-black text-[#26322f] md:text-5xl">搬家最难的，往往不是大事，而是每天的小沟通。</h2>
+          <div class="reveal" style="max-width:46rem;">
+            <p class="eyebrow">服务内容</p>
+            <h2>刚到葡萄牙，难的不是大事，是每天的小事。</h2>
+            <p class="prose" style="margin-top:1.25rem;">真正卡住人的，很少是法律问题，而是当场那几句话：中介说得快，柜台又要一份没人提过的材料，学校秘书拿出一张只有葡语版本的表格。这些都不需要有资质的笔译，需要的是一个站在你旁边、母语就是当地语言的人，用中文告诉你他刚才说了什么、他要你做什么。</p>
           </div>
-          <div class="mt-10 grid gap-5 md:grid-cols-2">
-            <article class="path-card p-7">
-              <h3 class="text-3xl font-black">租房与社区适应</h3>
-              <p class="mt-4 text-lg leading-9 text-[#52605a]">理解房东信息、预约看房、解释基础条款、认识社区、处理日常生活中的葡语和英语沟通。</p>
+
+          <div class="grid grid--2 reveal-group" style="margin-top:2.5rem;">
+            <article class="card">
+              <span class="card-icon"><i data-lucide="home"></i></span>
+              <h3>看房与租房中介</h3>
+              <p class="prose" style="margin-top:.75rem;">我跟你一起去看房，替你问那些容易忘的问题：管理费多少、包含什么、合同几年、押金怎么退。看完之后我会告诉你，哪几条我会要求写进合同再签字。</p>
             </article>
-            <article class="path-card p-7">
-              <h3 class="text-3xl font-black">预约与实际翻译</h3>
-              <p class="mt-4 text-lg leading-9 text-[#52605a]">诊所、学校、服务窗口、维修、快递、银行前期沟通等日常场景的中文解释和沟通支持。</p>
+            <article class="card card--featured">
+              <span class="card-icon"><i data-lucide="landmark"></i></span>
+              <h3>各类窗口与预约</h3>
+              <p class="prose" style="margin-top:.75rem;">财政局办税号 NIF、市政厅、教区办公室、水电燃气、移民相关预约。我把对方的问题讲清楚，确认你的回答没有被理解错，并把下次要带的材料写下来给你。</p>
+            </article>
+            <article class="card">
+              <span class="card-icon"><i data-lucide="graduation-cap"></i></span>
+              <h3>学校与课外班</h3>
+              <p class="prose" style="margin-top:.75rem;">报名、和老师面谈、体育俱乐部注册，以及没完没了的表格。大部分家长日常生活都能应付，偏偏在这里卡住，因为学校葡语本身就是一套官僚话。</p>
+            </article>
+            <article class="card">
+              <span class="card-icon"><i data-lucide="stethoscope"></i></span>
+              <h3>诊所与日常杂事</h3>
+              <p class="prose" style="margin-top:.75rem;">前台挂号、说清楚症状、听懂后续安排。也包括那些能耗掉你一整周的小事：修东西、快递没到、账单看不懂。医疗过程本身的口译我不做，那需要有资质的医疗翻译。</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section-pad bg-[#f2eadb]">
-        <div class="wrap grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div class="grid grid-cols-2 gap-4">
-            <figure class="image-frame aspect-[4/5]">
-              <img src="images/renata-chinese-bridge-2025.webp" srcset="images/renata-chinese-bridge-2025-640.webp 640w, images/renata-chinese-bridge-2025-960.webp 960w, images/renata-chinese-bridge-2025.webp 1200w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="1200" height="817" alt="Renata 参加 2025 汉语桥中文比赛" decoding="async" loading="lazy">
+      <section class="section">
+        <div class="wrap split">
+          <div class="photo-duo reveal">
+            <figure class="frame frame--tall frame--zoom">
+              <img src="images/renata-cultuur.webp" srcset="images/renata-cultuur-640.webp 640w, images/renata-cultuur.webp 700w" sizes="(max-width: 900px) 45vw, 250px" width="700" height="870" alt="Renata 在湖北恩施穿当地传统服装" decoding="async" loading="lazy">
             </figure>
-            <figure class="image-frame mt-10 aspect-[4/5]">
-              <img src="images/renata-enshi-traditional-dress.webp" srcset="images/renata-enshi-traditional-dress-640.webp 640w, images/renata-enshi-traditional-dress-960.webp 960w, images/renata-enshi-traditional-dress.webp 1200w" sizes="(max-width: 860px) calc(100vw - 2rem), 560px" width="1200" height="800" alt="Renata 在中国恩施穿传统服装体验当地文化" decoding="async" loading="lazy">
+            <figure class="frame frame--tall frame--zoom">
+              <img src="images/renata-natuur.webp" srcset="images/renata-natuur-640.webp 640w, images/renata-natuur.webp 850w" sizes="(max-width: 900px) 45vw, 250px" width="850" height="940" alt="Renata 在湖北的峡谷边" decoding="async" loading="lazy">
             </figure>
           </div>
-          <div>
-            <p class="eyebrow mb-3">可信但诚实</p>
-            <h2>为什么可以找我？</h2>
-            <div class="mt-7 grid gap-4">
-              <article class="path-card p-5">
-                <h3 class="text-2xl font-black">葡萄牙语母语背景</h3>
-                <p class="mt-2 leading-8 text-[#52605a]">我能直接解释葡萄牙语表达、语气、生活场景和沟通逻辑，也能用英语辅助说明。</p>
-              </article>
-              <article class="path-card p-5">
-                <h3 class="text-2xl font-black">HSK 4，成绩 210</h3>
-                <p class="mt-2 leading-8 text-[#52605a]">我适合做日常中文沟通和生活解释。我不夸大为法律翻译、医学翻译或宣誓翻译。</p>
-              </article>
-              <article class="path-card p-5">
-                <h3 class="text-2xl font-black">中国学习与文化经历</h3>
-                <p class="mt-2 leading-8 text-[#52605a]">参加 2025 Chinese Bridge，并有 Hubei University 的学习与毕业场景照片作为个人经历展示。</p>
-              </article>
+          <div class="reveal">
+            <p class="eyebrow">先把话说在前面</p>
+            <h2>我的中文够用，但不是法庭口译的水平。</h2>
+            <p class="prose" style="margin-top:1.25rem;">HSK 4，成绩 210。我在湖北学习过，也参加过汉语桥比赛。这是扎实的日常水平：足够解释柜台在问什么、听出你的回答被误解了、让对话继续往下走，而不是卡在窗口前面。会议口译和法律口译不是这个水平，我也不会说成是。</p>
+            <blockquote class="quote" style="margin-top:1.75rem;">如果你的事情需要宣誓翻译，我会在第一条信息里就告诉你，而不是等你付了钱之后。</blockquote>
+            <p class="prose" style="margin-top:1.25rem;">翻译公司通常没有的，我有：葡萄牙语是我的母语，所以当地这一侧毫不费力；英语是我的工作语言，所以中文不够用的时候还有退路。三种语言加在一起，这件事就能办完。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="price" class="section section--subtle">
+        <div class="wrap">
+          <div class="reveal" style="max-width:46rem;">
+            <p class="eyebrow">价格</p>
+            <h2>写在页面上，和这里的其他东西一样。</h2>
+            <p class="prose" style="margin-top:1.25rem;">时间通常是晚上和周末，因为白天我在上课。这也意味着我一次只接少量的活，所以尽量提前问，不要等到前一天晚上。</p>
+          </div>
+          <div class="grid grid--3 reveal-group" style="margin-top:2.5rem;">
+            <article class="card card--featured">
+              <p class="eyebrow">现场陪同</p>
+              <p class="stat">45 €</p>
+              <h3 style="margin-top:.75rem;">每小时，最少两小时</h3>
+              <p class="prose" style="margin-top:.75rem;">我到你那里。里斯本、奥埃拉什、卡斯凯什范围内的交通已包含；更远的地方按实际交通费另算。大多数看房和窗口办事两小时之内能结束。</p>
+            </article>
+            <article class="card">
+              <p class="eyebrow">远程</p>
+              <p class="stat">25 €</p>
+              <h3 style="margin-top:.75rem;">每半小时</h3>
+              <p class="prose" style="margin-top:.75rem;">我加入一通电话、把一封信或一张表格讲明白、用葡语替你起草一条真的会被回复的信息。很多时候这样就够了。</p>
+            </article>
+            <article class="card">
+              <p class="eyebrow">不提供</p>
+              <p class="stat">0</p>
+              <h3 style="margin-top:.75rem;">公证与法律翻译</h3>
+              <p class="prose" style="margin-top:.75rem;">没有公证笔译，没有法院和警察局口译，没有医疗过程翻译。如果你需要的是这些，我会直接说，你的钱留着。</p>
+            </article>
+          </div>
+          <div class="btn-row reveal" style="margin-top:2rem;">
+            <a class="btn btn-whatsapp" href="https://wa.me/351935328206?text=%E4%BD%A0%E5%A5%BD%20Renata%EF%BC%8C%E6%88%91%E9%9C%80%E8%A6%81%E9%99%AA%E5%90%8C%E7%BF%BB%E8%AF%91%E3%80%82"><i data-lucide="message-circle"></i>说说你的情况</a>
+            <a class="btn btn-ghost" href="interpreting.html" style="font-family:var(--font-sans)"><i data-lucide="languages"></i>English version</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="areas" class="section section--raised">
+        <div class="wrap">
+          <div class="reveal" style="max-width:46rem;">
+            <p class="eyebrow">服务区域</p>
+            <h2>里斯本，以及往西的这条海岸线。</h2>
+            <p class="prose" style="margin-top:1.25rem;">我住在里斯本和卡斯凯什之间的 Paço de Arcos，而写信给我的人，多半就落在这一条线上。每个区域有单独的页面，写的是那里真正会遇到的情况。</p>
+          </div>
+          <div class="grid grid--3 reveal-group" style="margin-top:2.5rem;">
+            <a class="card card-link" href="zh-lisboa.html">
+              <span class="card-icon"><i data-lucide="map-pin"></i></span>
+              <h3>里斯本 Lisboa</h3>
+              <p class="prose" style="margin-top:.75rem;">移民和税务预约、市区租房、医院、大学手续。最重的手续都在这里。</p>
+              <span class="card-cta">里斯本陪同翻译 <i data-lucide="arrow-right"></i></span>
+            </a>
+            <a class="card card-link" href="zh-cascais.html">
+              <span class="card-icon"><i data-lucide="map-pin"></i></span>
+              <h3>卡斯凯什 Cascais</h3>
+              <p class="prose" style="margin-top:.75rem;">国际学校、举家搬迁、海边租房、孩子的俱乐部和活动。</p>
+              <span class="card-cta">卡斯凯什陪同翻译 <i data-lucide="arrow-right"></i></span>
+            </a>
+            <a class="card card-link" href="zh-oeiras.html">
+              <span class="card-icon"><i data-lucide="map-pin"></i></span>
+              <h3>奥埃拉什 Oeiras</h3>
+              <p class="prose" style="margin-top:.75rem;">我住的地方。Taguspark 一带的上班族、安静的家庭社区，开车都很近。</p>
+              <span class="card-cta">奥埃拉什陪同翻译 <i data-lucide="arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="reveal" style="max-width:46rem;">
+            <p class="eyebrow">你请的是这个人</p>
+            <h2>页面上是谁，柜台前就是谁。</h2>
+            <p class="prose" style="margin-top:1.25rem;">我是 Renata，巴西人，住在奥埃拉什，晚上教巴西葡萄牙语，其余时间帮人把葡萄牙的手续走完。中国不是我为了好看加上去的一行字：我在那里学习过，现在也还在用这门语言。</p>
+          </div>
+          <div class="photo-strip reveal-group" style="margin-top:2rem;">
+            <figure class="frame frame--zoom">
+              <img src="images/renata-headshot-640.webp" width="480" height="640" alt="Renata 在花树下微笑" decoding="async" loading="lazy">
+              <figcaption>里斯本，春天</figcaption>
+            </figure>
+            <figure class="frame frame--zoom">
+              <img src="images/renata-portret-640.webp" width="640" height="776" alt="Renata 在一次语言活动上交谈" decoding="async" loading="lazy">
+              <figcaption>语言活动</figcaption>
+            </figure>
+            <figure class="frame frame--zoom">
+              <img src="images/renata-natuur-640.webp" width="640" height="708" alt="Renata 在湖北的峡谷边" decoding="async" loading="lazy">
+              <figcaption>湖北，旅行中</figcaption>
+            </figure>
+            <figure class="frame frame--zoom">
+              <img src="images/renata-cultuur-640.webp" width="640" height="795" alt="Renata 在恩施穿传统服装" decoding="async" loading="lazy">
+              <figcaption>恩施，文化体验</figcaption>
+            </figure>
+          </div>
+          <div class="btn-row reveal" style="margin-top:2rem;">
+            <a class="btn btn-ghost" href="about.html" style="font-family:var(--font-sans)"><i data-lucide="user"></i>More about Renata</a>
+            <a class="btn btn-ghost" href="pricing.html" style="font-family:var(--font-sans)"><i data-lucide="calendar"></i>Portuguese lessons</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section section--subtle">
+        <div class="wrap">
+          <div class="reveal" style="max-width:46rem;">
+            <p class="eyebrow">常见问题</p>
+            <h2>约之前，先看看这几条。</h2>
+          </div>
+          <div class="grid grid--2 reveal-group" style="margin-top:2.5rem;">
+            <article class="card card--flat">
+              <h3>可以翻译公证或法律文件吗？</h3>
+              <p class="prose" style="margin-top:.75rem;">不可以。公证翻译、合同、法院和医疗文件都不在服务范围内，葡萄牙官方通常也要求有资质的宣誓翻译。我做的是现场口头沟通。</p>
+            </article>
+            <article class="card card--flat">
+              <h3>你的中文到底什么水平？</h3>
+              <p class="prose" style="margin-top:.75rem;">HSK 4，成绩 210，在湖北学习过，参加过汉语桥。扎实的日常水平：足够把问题讲清楚、听出误解。不是会议或法律口译的水平。</p>
+            </article>
+            <article class="card card--flat">
+              <h3>在哪几种语言之间翻译？</h3>
+              <p class="prose" style="margin-top:.75rem;">葡语母语，英语流利，中文是桥梁。实际上是葡语转中文、葡语转英语、英语转中文，哪种组合能把事办完就用哪种。</p>
+            </article>
+            <article class="card card--flat">
+              <h3>要提前多久约？</h3>
+              <p class="prose" style="margin-top:.75rem;">尽量提前几天。晚上我要上课，所以接的活不多，好的时间段先约先得。真的着急也可以问，有时候能排开。</p>
+            </article>
+            <article class="card card--flat">
+              <h3>去这三个区域以外吗？</h3>
+              <p class="prose" style="margin-top:.75rem;">有时候可以，交通费按实际另算。辛特拉和阿马多拉一般没问题。问一句，我会直接回答行或不行。</p>
+            </article>
+            <article class="card card--flat">
+              <h3>可以顺便教我葡萄牙语吗？</h3>
+              <p class="prose" style="margin-top:.75rem;">教学是我的主业，教的是巴西葡萄牙语，晚上上课。<a href="pricing.html" style="font-weight:700">课程和价格在这里。</a>不过上课用英语，不用中文。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--inverse">
+        <div class="wrap contact-grid">
+          <div class="reveal">
+            <p class="eyebrow">联系方式</p>
+            <h2>告诉我：什么事、在哪里、几点。</h2>
+            <p class="lead" style="margin-top:1.25rem;">三行就够了。我会马上回你能不能接，以及你是不是真的需要我。</p>
+            <div class="btn-row" style="margin-top:1.75rem;">
+              <a class="btn btn-whatsapp" href="https://wa.me/351935328206?text=%E4%BD%A0%E5%A5%BD%20Renata%EF%BC%8C%E6%88%91%E9%9C%80%E8%A6%81%E9%99%AA%E5%90%8C%E7%BF%BB%E8%AF%91%E3%80%82"><i data-lucide="message-circle"></i>用 WhatsApp 联系我</a>
             </div>
-            <p class="mt-6 text-sm leading-7 text-[#66726c]">参考链接：<a class="font-black underline" href="https://www.chinesetest.cn/HSK/4" target="_blank" rel="noopener">HSK 四级官方信息</a>、<a class="font-black underline" href="https://en.moe.gov.cn/news/press_releases/202509/t20250901_1411336.html" target="_blank" rel="noopener">Chinese Bridge 官方项目背景</a>、<a class="font-black underline" href="https://eng.hubu.edu.cn/" target="_blank" rel="noopener">Hubei University 官网</a>。</p>
+            <h4 style="margin-top:2rem; color:rgba(255,255,255,.9);">更想写下来？</h4>
+            <p class="prose">用表格也一样，进的是同一个信箱。</p>
           </div>
-        </div>
-      </section>
-
-      <section class="section-pad bg-white">
-        <div class="wrap">
-          <div class="max-w-3xl">
-            <p class="eyebrow mb-3">服务方向</p>
-            <h2 class="text-4xl font-black text-[#26322f] md:text-5xl">选择你现在最需要的支持。</h2>
-          </div>
-          <div class="mt-10 grid gap-5 lg:grid-cols-3">
-            <a class="service-card card-link p-6" href="#contact" aria-label="咨询基础搬家沟通支持">
-              <p class="eyebrow mb-3">按小时</p>
-              <h3 class="text-3xl font-black">基础搬家沟通支持</h3>
-              <p class="mt-4 leading-8 text-[#52605a]">适合单次问题：预约、短信解释、电话前准备、租房信息理解。</p>
-              <span class="btn btn-ghost mt-6 w-full">咨询这个服务</span>
-            </a>
-            <a class="service-card featured card-link p-6" href="#contact" aria-label="预约葡萄牙落地生活包免费咨询">
-              <p class="eyebrow mb-3">最实用</p>
-              <h3 class="text-3xl font-black">葡萄牙落地生活包</h3>
-              <p class="mt-4 leading-8 text-[#52605a]">适合刚到葡萄牙的人：社区、租房、日常服务和基础葡语沟通一起梳理。</p>
-              <span class="btn btn-primary mt-6 w-full">预约免费咨询</span>
-            </a>
-            <a class="service-card card-link p-6" href="#contact" aria-label="了解 VIP WhatsApp 支持">
-              <p class="eyebrow mb-3">高频需求</p>
-              <h3 class="text-3xl font-black">VIP WhatsApp 支持</h3>
-              <p class="mt-4 leading-8 text-[#52605a]">适合需要频繁沟通的人：短信息解释、句子修改和紧急生活场景辅助。</p>
-              <span class="btn btn-ghost mt-6 w-full">了解 VIP 支持</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="section-pad bg-white">
-        <div class="wrap">
-          <div class="max-w-3xl">
-            <p class="eyebrow mb-3">常见问题</p>
-            <h2 class="text-4xl font-black text-[#26322f] md:text-5xl">预约前可以先了解这些。</h2>
-          </div>
-          <div class="faq-grid mt-10 md:grid-cols-3">
-            <article class="path-card p-6">
-              <h3 class="text-2xl font-black">可以做法律翻译吗？</h3>
-              <p class="mt-3 leading-8 text-[#52605a]">不提供法律、医学或宣誓翻译。服务重点是日常沟通和生活适应。</p>
-            </article>
-            <article class="path-card p-6">
-              <h3 class="text-2xl font-black">服务区域在哪里？</h3>
-              <p class="mt-3 leading-8 text-[#52605a]">重点服务 Lisbon、Cascais、Oeiras、Paço de Arcos，也可以线上沟通。</p>
-            </article>
-            <article class="path-card p-6">
-              <h3 class="text-2xl font-black">怎么开始？</h3>
-              <p class="mt-3 leading-8 text-[#52605a]">填写表单或打开 WhatsApp，简单说明你现在遇到的问题。</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section-pad bg-[#26322f] text-white">
-        <div class="wrap grid gap-10 lg:grid-cols-[0.8fr_1fr]">
-          <div>
-            <p class="eyebrow mb-3 text-[#e6c7aa]">免费咨询</p>
-            <h2>告诉我你现在卡在哪里。</h2>
-            <p class="mt-5 text-lg leading-9 text-white/75">提交后会自动打开 WhatsApp，并把你的信息整理好，方便直接发送。</p>
-          </div>
-          <form name="contato-zh" method="POST" data-netlify="true" netlify-honeypot="empresa" action="/thanks.html" data-track-form class="grid gap-4 rounded-lg bg-white p-5 text-[#26322f]">
+          <form name="contato-zh" method="POST" data-netlify="true" netlify-honeypot="empresa" action="/thanks.html" data-track-form class="form-card reveal">
             <input type="hidden" name="form-name" value="contato-zh">
-            <p class="hidden"><label>请勿填写: <input name="empresa"></label></p>
-            <label class="font-black">姓名<input class="input mt-2" name="name" autocomplete="name" required></label>
-            <label class="font-black">邮箱<input class="input mt-2" name="email" type="email" autocomplete="email" required></label>
-            <label class="font-black">你需要哪种服务？
-              <select class="input mt-2" name="service" required>
-                <option>Chinese relocation and translation support</option>
-                <option>Kids Brazilian Portuguese or Chinese lessons</option>
-                <option>VIP WhatsApp support</option>
-                <option>Portuguese lessons</option>
-                <option>Not sure yet</option>
+            <p hidden><label>请勿填写: <input name="empresa"></label></p>
+            <label class="field">姓名<input class="input" name="nome" autocomplete="name" required></label>
+            <label class="field">邮箱<input class="input" name="email" type="email" autocomplete="email" required></label>
+            <label class="field">你需要哪一种？
+              <select class="input" name="assunto" required>
+                <option value="">请选择</option>
+                <option>看房或租房中介</option>
+                <option>窗口办事或预约</option>
+                <option>学校或课外班</option>
+                <option>诊所或日常杂事</option>
+                <option>远程电话或信息</option>
+                <option>还不确定</option>
               </select>
             </label>
-            <label class="font-black">留言<textarea class="input mt-2 min-h-32" name="message" required></textarea></label>
-            <button class="btn btn-primary w-full" type="submit"><i data-lucide="send" class="h-4 w-4"></i>预约免费咨询</button>
+            <label class="field">在哪里、什么时候<textarea class="input" name="mensagem" rows="4" required></textarea></label>
+            <button class="btn btn-primary" type="submit"><i data-lucide="send"></i>发送</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="bg-[#171f1d] py-10 text-white">
-      <div class="wrap flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+    <footer class="site-footer">
+      <div class="wrap" style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between;">
         <div>
-          <p class="font-display text-xl font-bold">Portuguese With Renata</p>
-          <p class="footer-meta mt-2">Paço de Arcos, Oeiras, Portugal<br>Website by <a href="https://www.adsvantage.nl/" target="_blank" rel="noopener">Adsvantage.nl</a></p>
+          <p style="color:#fff; font-family:var(--font-zh); font-size:1.15rem; font-weight:700;">Portuguese With Renata</p>
+          <p style="margin-top:.5rem; line-height:1.9;">中文陪同翻译：里斯本、奥埃拉什、卡斯凯什<br>常驻 Paço de Arcos，葡萄牙<br>网站制作 <a href="https://adsvantage.pt/" target="_blank" rel="noopener">Adsvantage.pt</a></p>
         </div>
-        <nav class="flex flex-wrap gap-5 text-sm font-bold text-white/70" aria-label="Footer navigation">
-          <a href="index.html">Home</a>
-          <a href="pricing.html">Portuguese lessons</a>
-          <a href="free.html">Kids lessons</a>
-          <a href="about.html">Reviews</a>
-          <a href="https://wa.me/351935328206">WhatsApp</a>
+        <nav aria-label="页脚导航" style="display:flex; flex-wrap:wrap; gap:1.25rem; align-items:flex-start;">
+          <a href="zh-lisboa.html">里斯本</a>
+          <a href="zh-cascais.html">卡斯凯什</a>
+          <a href="zh-oeiras.html">奥埃拉什</a>
+          <a href="interpreting.html" style="font-family:var(--font-sans)">English</a>
+          <a href="index.html" style="font-family:var(--font-sans)">Portuguese lessons</a>
         </nav>
       </div>
     </footer>
 
-    <aside data-whatsapp-popup class="whatsapp-popup">
-      <div class="rounded-lg border border-[#2fbf71]/30 bg-white p-4 text-[#26322f] soft-shadow">
-        <button data-whatsapp-close class="absolute right-3 top-3 rounded-full p-1 text-[#52605a]" aria-label="关闭 WhatsApp 弹窗"><i data-lucide="x" class="h-5 w-5"></i></button>
-        <p class="pr-8 text-lg font-black">有问题？直接和我聊聊。</p>
-        <a class="btn mt-4 w-full bg-[#25D366] text-[#06351e]" href="https://wa.me/351935328206"><i data-lucide="message-circle" class="h-4 w-4"></i>打开 WhatsApp</a>
-      </div>
-    </aside>
-    <a class="mobile-sticky-cta" href="#contact"><i data-lucide="message-circle" class="h-4 w-4"></i>免费咨询</a>
-    <script src="assets/site.js"></script>
+    <a class="wa-float" href="https://wa.me/351935328206?text=%E4%BD%A0%E5%A5%BD%20Renata%EF%BC%8C%E6%88%91%E9%9C%80%E8%A6%81%E9%99%AA%E5%90%8C%E7%BF%BB%E8%AF%91%E3%80%82" aria-label="用 WhatsApp 联系 Renata">
+      <i data-lucide="message-circle"></i>WhatsApp
+    </a>
   </body>
 </html>
