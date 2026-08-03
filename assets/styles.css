@@ -1226,3 +1226,146 @@ footer .footer-meta {
 footer .footer-meta a {
   color: #ffffff;
 }
+
+/* ---------------------------------------------------------------------------
+   Statische utilities — vervangen cdn.tailwindcss.com
+
+   free/pricing/about/thanks waren nog opgebouwd met Tailwind-utilityklassen en
+   laadden daarvoor de CDN-build, die in de browser compileert: ~120 kB JavaScript
+   op elke paginaweergave, plus een externe afhankelijkheid waar de opmaak van
+   afhangt. Hieronder staan exact de 98 klassen die die pagina's gebruiken, met
+   Tailwinds standaardwaarden, zodat de opmaak identiek blijft. Staat bewust
+   achteraan: de CDN injecteerde zijn stijlblok ook ná deze stylesheet.
+   --------------------------------------------------------------------------- */
+
+/* weergave en flow */
+.flex { display: flex; }
+.hidden { display: none; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.shrink-0 { flex-shrink: 0; }
+.align-top { vertical-align: top; }
+.whitespace-nowrap { white-space: nowrap; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* afmetingen */
+.w-4 { width: 1rem; }
+.w-7 { width: 1.75rem; }
+.w-8 { width: 2rem; }
+.w-full { width: 100%; }
+.h-4 { height: 1rem; }
+.h-7 { height: 1.75rem; }
+.h-8 { height: 2rem; }
+.min-h-24 { min-height: 6rem; }
+.min-h-32 { min-height: 8rem; }
+.max-w-3xl { max-width: 48rem; }
+.aspect-\[4\/5\] { aspect-ratio: 4 / 5; }
+
+/* buitenruimte */
+.mt-1 { margin-top: .25rem; }
+.mt-2 { margin-top: .5rem; }
+.mt-3 { margin-top: .75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-5 { margin-top: 1.25rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-7 { margin-top: 1.75rem; }
+.mt-10 { margin-top: 2.5rem; }
+.mb-3 { margin-bottom: .75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-5 { margin-bottom: 1.25rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.ml-1 { margin-left: .25rem; }
+
+/* binnenruimte en tussenruimte */
+.p-5 { padding: 1.25rem; }
+.p-6 { padding: 1.5rem; }
+.p-7 { padding: 1.75rem; }
+.pr-4 { padding-right: 1rem; }
+.px-2 { padding-left: .5rem; padding-right: .5rem; }
+.py-0\.5 { padding-top: .125rem; padding-bottom: .125rem; }
+.py-3 { padding-top: .75rem; padding-bottom: .75rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.gap-3 { gap: .75rem; }
+.gap-4 { gap: 1rem; }
+.gap-5 { gap: 1.25rem; }
+.gap-10 { gap: 2.5rem; }
+
+/* typografie */
+.text-xs { font-size: .75rem; line-height: 1rem; }
+.text-sm { font-size: .875rem; line-height: 1.25rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-5xl { font-size: 3rem; line-height: 1; }
+.font-normal { font-weight: 400; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+.leading-6 { line-height: 1.5rem; }
+.leading-7 { line-height: 1.75rem; }
+.leading-8 { line-height: 2rem; }
+.leading-\[1\.05\] { line-height: 1.05; }
+.tracking-wide { letter-spacing: .025em; }
+.uppercase { text-transform: uppercase; }
+.underline { text-decoration-line: underline; }
+
+/* kleuren */
+.bg-white { background-color: #fff; }
+.bg-\[\#171f1d\] { background-color: #171f1d; }
+.bg-\[\#26322f\] { background-color: #26322f; }
+.bg-\[\#26322f\]\/8 { background-color: rgb(38 50 47 / .08); }
+.bg-\[\#f2eadb\] { background-color: #f2eadb; }
+.bg-\[\#fffaf2\] { background-color: #fffaf2; }
+.text-white { color: #fff; }
+.text-white\/60 { color: rgb(255 255 255 / .6); }
+.text-white\/70 { color: rgb(255 255 255 / .7); }
+.text-white\/75 { color: rgb(255 255 255 / .75); }
+.text-\[\#26322f\] { color: #26322f; }
+.text-\[\#47705f\] { color: #47705f; }
+.text-\[\#52605a\] { color: #52605a; }
+.text-\[\#66726c\] { color: #66726c; }
+.text-\[\#7c5f3d\] { color: #7c5f3d; }
+.text-\[\#b95b3a\] { color: #b95b3a; }
+.text-\[\#e6c7aa\] { color: #e6c7aa; }
+
+/* randen en hoeken */
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+.border-\[\#26322f\]\/10 { border-color: rgb(38 50 47 / .1); }
+.border-\[\#26322f\]\/15 { border-color: rgb(38 50 47 / .15); }
+.rounded { border-radius: .25rem; }
+.rounded-lg { border-radius: .5rem; }
+
+/* toegankelijkheid */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sm\:text-6xl { font-size: 3.75rem; line-height: 1; }
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:flex-row { flex-direction: row; }
+  .md\:items-start { align-items: flex-start; }
+  .md\:justify-between { justify-content: space-between; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-\[0\.8fr_1fr\] { grid-template-columns: 0.8fr 1fr; }
+  .lg\:grid-cols-\[1fr_0\.85fr\] { grid-template-columns: 1fr 0.85fr; }
+  .lg\:grid-cols-\[1fr_0\.9fr\] { grid-template-columns: 1fr 0.9fr; }
+  .lg\:items-center { align-items: center; }
+  .lg\:items-start { align-items: flex-start; }
+}
