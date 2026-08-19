@@ -506,16 +506,42 @@ def generate(topic):
     return art
 
 
+# Losse woorden die een afgekapte titel als een halve zin laten klinken.
+BENGELWOORDEN = {"vs", "and", "or", "but", "the", "a", "an", "of", "in", "on", "for", "to", "with",
+                 "e", "ou", "de", "da", "do", "com", "para", "que", "no", "na", "um", "uma"}
+
+
+def tidy(s):
+    """Maak een (mogelijk afgekapte) titel of meta netjes af.
+
+    Een afkapping mag geen haakje of aanhalingsteken open laten staan en niet eindigen op
+    een voegwoord: "... Portuguese (Obrigado vs" leest als een fout, niet als een titel.
+    Staat apart van trim() zodat rerender ook al opgeslagen titels kan repareren."""
+    s = re.sub(r"\s+", " ", (s or "").strip())
+    for open_ch, close_ch in (("(", ")"), ("[", "]"), ("“", "”"), ("‘", "’")):
+        if s.count(open_ch) > s.count(close_ch):
+            s = s[:s.rfind(open_ch)]
+    s = s.rstrip(" ,;:-–—·.(“")
+    while s and s.split()[-1].lower().strip(",.;:") in BENGELWOORDEN:
+        s = s[:s.rfind(" ")].rstrip(" ,;:-–—·.") if " " in s else ""
+    return s
+
+
 def repair(art):
-    """Redt goede content van harde afkeuring: knipt alleen te lange titel/meta op woordgrens."""
+    """Redt goede content van harde afkeuring: knipt te lange titel/meta netjes op woordgrens."""
     def trim(s, n):
         s = re.sub(r"\s+", " ", (s or "").strip())
         if len(s) <= n:
-            return s
+            return tidy(s)
         cut = s[:n]
         if " " in cut:
             cut = cut[:cut.rfind(" ")]
-        return cut.rstrip(" ,;:-–—·.")
+        # Er IS afgekapt, dus een ondertitel na een dubbele punt is nu half. Liever de hele
+        # ondertitel weg dan "... on Alibaba: Get a Real" als titel in de zoekresultaten.
+        kop = cut.rsplit(":", 1)[0]
+        if ":" in cut and len(kop) >= 20:
+            cut = kop
+        return tidy(cut)
     if art.get("title"):
         art["title"] = trim(art["title"], 60)
     if art.get("meta_description"):
@@ -1228,11 +1254,18 @@ def cmd_rerender():
         m = load_manifest(silo)
         cfg = SILOS[silo]
         done = 0
+        gewijzigd = False
         for p in m["pages"]:
             art = p.get("article")
             if not art:
                 print("  overgeslagen (geen article in manifest, van voor deze versie): " + p["slug"])
                 continue
+            schoon = tidy(art.get("title", ""))
+            if schoon != art.get("title"):
+                print("  titel opgeschoond: " + repr(art["title"]) + " -> " + repr(schoon))
+                art["title"] = schoon
+                p["title"] = schoon
+                gewijzigd = True
             art["_body_text"] = p.get("text", "")
             art["_words"] = len(art["_body_text"].split())
             page_dir = SITE_DIR / cfg["dir"] / p["slug"]
@@ -1244,6 +1277,8 @@ def cmd_rerender():
         if m["pages"]:
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(render_hub(silo, m), encoding="utf-8")
+        if gewijzigd:
+            save_manifest(silo, m)
         print("/" + cfg["dir"] + "/: " + str(done) + " paginas herbouwd")
         total += done
     print("Totaal " + str(total) + " paginas herbouwd uit het manifest.")
