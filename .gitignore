@@ -1,2 +1,6 @@
 .netlify/
 responsive-report/
+__pycache__/
+*.pyc
+.github/lp-engine/.env
+**/_pending.json

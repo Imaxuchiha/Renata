@@ -1,0 +1,90 @@
+name: lp-cron
+
+# Dagelijks 2 nieuwe landingspagina's voor portuguesewithrenata.com: 1 per silo.
+#   /learn/  Engelstalig, Braziliaans Portugees leren
+#   /china/  pt-BR, importeren uit China en praten met Chinese leveranciers
+#
+# De motor kiest zelf een nieuw onderwerp (GSC striking-distance + gecureerde seed-backlog,
+# gededupliceerd tegen het manifest), laat DeepSeek alleen proza als JSON schrijven, rendert de
+# HTML deterministisch en haalt de kwaliteitspoort of publiceert niet. Niets publiceren is een
+# geldige uitkomst, geen storing.
+#
+# Deploy: Netlify bouwt vanzelf vanaf `main`, dus de push IS de deploy. De motor deployt niet zelf
+# (LP_SKIP_GIT=1) - de commit + rebase + push gebeurt hieronder, zodat een gelijktijdige handmatige
+# wijziging op main niet overschreven wordt. Dat is de les uit de twee acinstall-incidenten.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # dagelijks 06:00 UTC (07:00 Lissabon-zomertijd)
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Aantal pagina's deze run"
+        required: false
+        default: "2"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lp-cron
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # volledige historie: nodig voor een veilige pull --rebase
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Secrets naar .env voor de motor
+        run: |
+          cat > .github/lp-engine/.env <<'EOF'
+          DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}
+          GADS_CLIENT_ID=${{ secrets.GADS_CLIENT_ID }}
+          GADS_CLIENT_SECRET=${{ secrets.GADS_CLIENT_SECRET }}
+          GSC_REFRESH_TOKEN=${{ secrets.GSC_REFRESH_TOKEN }}
+          GSC_REFRESH_TOKEN_WRITE=${{ secrets.GSC_REFRESH_TOKEN_WRITE }}
+          EOF
+
+      - name: Genereer landingspagina's
+        env:
+          RENATA_DIR: ${{ github.workspace }}
+          LP_SKIP_GIT: "1"
+        run: |
+          python .github/lp-engine/scripts/lp_engine.py run \
+            --count "${{ github.event.inputs.count || '2' }}"
+
+      - name: Commit en push (zonder secrets)
+        id: commit
+        run: |
+          rm -f .github/lp-engine/.env
+          git config user.name "renata-lp-bot"
+          git config user.email "bot@portuguesewithrenata.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add learn china sitemap.xml
+            git commit -m "lp: auto-publish $(date +%F)"
+            git pull --rebase origin main
+            git push origin main
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Poort liet niets door - geen commit. Dat is ontwerp, geen storing."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Enige zinvolle GSC-schrijfactie via de API. Per-URL 'indexering aanvragen' bestaat niet
+      # in de API en blijft handwerk in de GSC-UI.
+      - name: Sitemap opnieuw indienen bij Search Console
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GADS_CLIENT_ID: ${{ secrets.GADS_CLIENT_ID }}
+          GADS_CLIENT_SECRET: ${{ secrets.GADS_CLIENT_SECRET }}
+          GSC_REFRESH_TOKEN_WRITE: ${{ secrets.GSC_REFRESH_TOKEN_WRITE }}
+        run: |
+          python .github/lp-engine/scripts/gsc_sitemap.py portuguesewithrenata.com --submit || \
+            echo "Sitemap-ping mislukt; Netlify serveert de sitemap toch, Google haalt hem later op."
