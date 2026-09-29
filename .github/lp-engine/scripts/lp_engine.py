@@ -527,8 +527,34 @@ def tidy(s):
     return s
 
 
+# Gedachtestreepjes horen niet in de sitecopy (vaste schrijfregel), maar het model zet ze er toch
+# in. Em-dash en horizontale streep altijd; een en-dash alleen met spaties eromheen en niet tussen
+# twee getallen, zodat een bereik als "9–18" blijft staan.
+_STREEP = re.compile(r"\s*[—―]\s*|(?<!\d)\s+–\s+(?!\d)")
+
+
+def ontstreep(obj):
+    """Vervang gedachtestreepjes door een komma, of door niets na ?, !, : en dergelijke."""
+    if isinstance(obj, dict):
+        return {k: (v if k == "slug" else ontstreep(v)) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [ontstreep(v) for v in obj]
+    if not isinstance(obj, str):
+        return obj
+
+    def sub(m):
+        voor = m.string[:m.start()].rstrip()
+        na = m.string[m.end():m.end() + 1]
+        if not voor or not na or na in ".,;:?!)":
+            return ""
+        return " " if voor[-1] in "?!:.;,(" else ", "
+    return _STREEP.sub(sub, obj)
+
+
 def repair(art):
     """Redt goede content van harde afkeuring: knipt te lange titel/meta netjes op woordgrens."""
+    art = ontstreep(art)
+
     def trim(s, n):
         s = re.sub(r"\s+", " ", (s or "").strip())
         if len(s) <= n:

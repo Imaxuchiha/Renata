@@ -1,8 +1,10 @@
 name: lp-cron
 
-# Dagelijks 2 nieuwe landingspagina's voor portuguesewithrenata.com: 1 per silo.
-#   /learn/  Engelstalig, Braziliaans Portugees leren
-#   /china/  pt-BR, importeren uit China en praten met Chinese leveranciers
+# Dagelijks 2 nieuwe landingspagina's voor portuguesewithrenata.com, verdeeld over 3 silo's
+# (de silo met de minste pagina's eerst):
+#   /learn/     Engelstalig, Braziliaans Portugees leren
+#   /china/     pt-BR, importeren uit China en praten met Chinese leveranciers
+#   /sourcing/  Engelstalig, Europese verkopers die in China inkopen
 #
 # De motor kiest zelf een nieuw onderwerp (GSC striking-distance + gecureerde seed-backlog,
 # gededupliceerd tegen het manifest), laat DeepSeek alleen proza als JSON schrijven, rendert de
@@ -60,22 +62,42 @@ jobs:
           python .github/lp-engine/scripts/lp_engine.py run \
             --count "${{ github.event.inputs.count || '2' }}"
 
+      # Alles wat de motor schreef gaat mee: elke silo-map met pagina, hub en manifest.json (de
+      # state die bepaalt wat al gepubliceerd is) plus sitemap.xml. Hier stond eerst een vaste lijst
+      # 'learn china sitemap.xml'. De derde silo /sourcing/ viel daarbuiten, bleef onstaged achter
+      # en liet 'git pull --rebase' vanaf 21-08-2026 elke dag vallen, waardoor ook learn nooit live
+      # kwam. 'git add -A' pakt ook een silo die er later bijkomt; .gitignore houdt .env,
+      # __pycache__ en _pending.json buiten de commit.
       - name: Commit en push (zonder secrets)
         id: commit
         run: |
           rm -f .github/lp-engine/.env
           git config user.name "renata-lp-bot"
           git config user.email "bot@portuguesewithrenata.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add learn china sitemap.xml
-            git commit -m "lp: auto-publish $(date +%F)"
-            git pull --rebase origin main
-            git push origin main
-            echo "pushed=true" >> "$GITHUB_OUTPUT"
-          else
+          git add -A
+          if git diff --cached --name-only | grep -E '(^|/)\.env$'; then
+            echo "::error::.env staat klaar voor de commit, afgebroken."
+            exit 1
+          fi
+          if git diff --cached --quiet; then
             echo "Poort liet niets door - geen commit. Dat is ontwerp, geen storing."
             echo "pushed=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          git diff --cached --stat
+          git commit -m "lp: auto-publish $(date +%F)"
+          # Rebase op main vlak voor de push (handmatig werk op main niet overschrijven).
+          # --autostash als vangnet, en 3 pogingen tegen een race met een gelijktijdige push.
+          for poging in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((poging * 10))
+          done
+          echo "::error::Push naar main mislukt na 3 pogingen."
+          exit 1
 
       # Enige zinvolle GSC-schrijfactie via de API. Per-URL 'indexering aanvragen' bestaat niet
       # in de API en blijft handwerk in de GSC-UI.
