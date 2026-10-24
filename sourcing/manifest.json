@@ -2694,6 +2694,182 @@
         "source": "gsc",
         "silo": "sourcing"
       }
+    },
+    {
+      "slug": "what-to-do-when-china-order-arrives-wrong",
+      "title": "What to Do When a China Order Arrives Wrong",
+      "desc": "Wrong product, late or short delivery from a Chinese supplier? Here is how to write a complaint that gets resolved, with message templates and Chinese",
+      "eyebrow": "Supplier complaint guide",
+      "target_query": "what to do when a china order arrives wrong",
+      "date": "2026-10-24",
+      "source": "seed",
+      "text": "When a China order arrives wrong, stop and document everything before you send a single angry message. Photograph the cartons, the labels and the product, count what is missing, then write one calm message that states the problem, the evidence and the outcome you want. A clear complaint gets resolved far more often than a long emotional one. Wrong product, late delivery and short quantity are different problems and they need different complaints. A wrong product is a specification or picking error. A late order is a production or shipping delay. A short quantity is a packing or loading error. Mixing them in one message makes it easy for the supplier to answer only the easiest point. Before you write anything, check your own paperwork. Compare the goods against the proforma invoice, the packing list and the photos you approved. If the supplier sent exactly what you confirmed, the problem may sit with your own specification, and that changes how you write. A complaint that gets resolved has four parts: what you ordered, what arrived, the evidence, and what you want. Keep it under 150 words if you can. Suppliers read many messages a day and a short, structured one is easier to act on than a paragraph of frustration. Put the order number and the invoice number in the first line. Then state the gap in one sentence. Then say what you want: a replacement, a refund, a credit on the next order, or a partial refund. If you do not say what you want, the supplier will choose for you, and usually that choice is the cheapest one for them. You do not need to write in Chinese, but a short Chinese line at the top of the message often gets a faster reply. Keep it simple and put the English underneath so there is no doubt about what you mean. Renata studied at Hubei University and holds HSK 4, which is solid everyday and operational business Chinese, not legal or technical level. These phrases are standard in supplier conversations. Use them as written and avoid machine translation for anything more complicated, because a wrong character can change the meaning of a complaint. A late order is usually a production or shipping problem, not dishonesty. Ask for the current status and a realistic ship date in writing. If the delay affects your own customers, say so plainly and ask what the supplier can do, for example a partial shipment of what is ready. Keep a written record of every promised date. If the supplier misses two promised dates in a row, that is a pattern worth acting on, and you can ask for a discount or a credit on the next order. Do not threaten a chargeback in the first message; it usually ends the conversation. Short quantity is the easiest problem to prove if you count on arrival. Count before you sign anything and photograph the open carton with the packing list visible. Then send the count and the photo in one message and ask for the missing units to be sent with your next order or refunded. Small shortages of a few units are common and often settled with a credit. Large shortages are worth a formal message with the packing list attached. Either way, do not wait weeks to report it, because the longer you wait the harder it is to prove the shortage happened before delivery. If the supplier stops answering or the answers do not match what you agreed, a live call often moves things faster than another email. Renata sits in on live calls with Chinese suppliers and can read and write supplier messages, explain what an answer really means, and help you keep the tone firm but workable. Remote support is 25 EUR per half hour, and on location in the Lisbon area is 45 EUR per hour with a two-hour minimum. She is not a sourcing agent. She does not inspect factories, handle samples, arrange freight, clear customs or guarantee a supplier, and she does not do sworn or certified translation. What she does is help you understand and be understood in the conversation, which is often where a stuck complaint starts moving again. Photograph the outer carton, the shipping label and the inner packing. Photograph the product next to a ruler or a reference item. Count the units and write the number down. Save the chat history where you approved the specification. Order Order and invoice number Order PO-2291, invoice 88-0412 Gap One sentence on the difference We ordered 500 blue, received 500 red Evidence Photos and count Photos attached, 500 units counted Ask The outcome you want Please send 500 blue or refund the difference Deadline A reasonable reply date Please confirm by Friday 12 May 订单号 dìngdān hào order number 数量不对 shùliàng bù duì the quantity is wrong 颜色不对 yánsè bù duì the colour is wrong 发错货 fā cuò huò wrong goods sent 请补发 qǐng bǔfā please send the missing goods 请退款 qǐng tuìkuǎn please refund 请确认 qǐng quèrèn please confirm Write it in English with a short Chinese line at the top if you can. Most suppliers have someone who reads English, and the Chinese line gets attention. Keep the Chinese simple and put the English underneath so there is no misunderstanding. Complain as soon as the promised ship date has passed without an update. Ask for the current status and a new date in writing. Waiting does not improve the order, and it makes it harder to show that the delay was real. Go back to the proforma invoice, the packing list and the chat where you approved the specification. Send those documents in one message and ask the supplier to compare them with what was shipped. If the documents support you, say so calmly and repeat what you want. Yes, she provides live interpreting and message support between a Portuguese- or English-speaking buyer and a Chinese supplier, by video or WeChat call. Remote support is 25 EUR per half hour. She does not act as a sourcing agent and does not guarantee any supplier outcome. HSK 4 is solid everyday and operational business Chinese, which covers most supplier messages and calls. It is not legal, technical or sworn-translation level. For a simple complaint it is usually enough, and for a contract dispute you would need a qualified professional. Ask for the outcome that costs you least. A replacement is best if you still need the goods. A refund is best if you cannot use them. A credit on the next order is often the fastest to agree, but only accept it if you plan to order again.",
+      "article": {
+        "title": "What to Do When a China Order Arrives Wrong",
+        "meta_description": "Wrong product, late or short delivery from a Chinese supplier? Here is how to write a complaint that gets resolved, with message templates and Chinese",
+        "slug": "what-to-do-when-china-order-arrives-wrong",
+        "eyebrow": "Supplier complaint guide",
+        "h1": "What should you do when a China order arrives wrong?",
+        "h1_highlight": "arrives wrong",
+        "lead": "When a China order arrives wrong, stop and document everything before you send a single angry message. Photograph the cartons, the labels and the product, count what is missing, then write one calm message that states the problem, the evidence and the outcome you want. A clear complaint gets resolved far more often than a long emotional one.",
+        "sections": [
+          {
+            "h2": "First, separate the three kinds of wrong",
+            "body": [
+              "Wrong product, late delivery and short quantity are different problems and they need different complaints. A wrong product is a specification or picking error. A late order is a production or shipping delay. A short quantity is a packing or loading error. Mixing them in one message makes it easy for the supplier to answer only the easiest point.",
+              "Before you write anything, check your own paperwork. Compare the goods against the proforma invoice, the packing list and the photos you approved. If the supplier sent exactly what you confirmed, the problem may sit with your own specification, and that changes how you write."
+            ],
+            "bullets": [
+              "Photograph the outer carton, the shipping label and the inner packing.",
+              "Photograph the product next to a ruler or a reference item.",
+              "Count the units and write the number down.",
+              "Save the chat history where you approved the specification."
+            ]
+          },
+          {
+            "h2": "Write the complaint in this order",
+            "body": [
+              "A complaint that gets resolved has four parts: what you ordered, what arrived, the evidence, and what you want. Keep it under 150 words if you can. Suppliers read many messages a day and a short, structured one is easier to act on than a paragraph of frustration.",
+              "Put the order number and the invoice number in the first line. Then state the gap in one sentence. Then say what you want: a replacement, a refund, a credit on the next order, or a partial refund. If you do not say what you want, the supplier will choose for you, and usually that choice is the cheapest one for them."
+            ],
+            "table": {
+              "head": [
+                "Part",
+                "What to write",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "Order",
+                  "Order and invoice number",
+                  "Order PO-2291, invoice 88-0412"
+                ],
+                [
+                  "Gap",
+                  "One sentence on the difference",
+                  "We ordered 500 blue, received 500 red"
+                ],
+                [
+                  "Evidence",
+                  "Photos and count",
+                  "Photos attached, 500 units counted"
+                ],
+                [
+                  "Ask",
+                  "The outcome you want",
+                  "Please send 500 blue or refund the difference"
+                ],
+                [
+                  "Deadline",
+                  "A reasonable reply date",
+                  "Please confirm by Friday 12 May"
+                ]
+              ]
+            }
+          },
+          {
+            "h2": "Useful Chinese phrases for the message",
+            "body": [
+              "You do not need to write in Chinese, but a short Chinese line at the top of the message often gets a faster reply. Keep it simple and put the English underneath so there is no doubt about what you mean. Renata studied at Hubei University and holds HSK 4, which is solid everyday and operational business Chinese, not legal or technical level.",
+              "These phrases are standard in supplier conversations. Use them as written and avoid machine translation for anything more complicated, because a wrong character can change the meaning of a complaint."
+            ],
+            "table": {
+              "head": [
+                "Chinese",
+                "Pinyin",
+                "English"
+              ],
+              "rows": [
+                [
+                  "订单号",
+                  "dìngdān hào",
+                  "order number"
+                ],
+                [
+                  "数量不对",
+                  "shùliàng bù duì",
+                  "the quantity is wrong"
+                ],
+                [
+                  "颜色不对",
+                  "yánsè bù duì",
+                  "the colour is wrong"
+                ],
+                [
+                  "发错货",
+                  "fā cuò huò",
+                  "wrong goods sent"
+                ],
+                [
+                  "请补发",
+                  "qǐng bǔfā",
+                  "please send the missing goods"
+                ],
+                [
+                  "请退款",
+                  "qǐng tuìkuǎn",
+                  "please refund"
+                ],
+                [
+                  "请确认",
+                  "qǐng quèrèn",
+                  "please confirm"
+                ]
+              ]
+            }
+          },
+          {
+            "h2": "Late orders: complain about the delay, not the supplier",
+            "body": [
+              "A late order is usually a production or shipping problem, not dishonesty. Ask for the current status and a realistic ship date in writing. If the delay affects your own customers, say so plainly and ask what the supplier can do, for example a partial shipment of what is ready.",
+              "Keep a written record of every promised date. If the supplier misses two promised dates in a row, that is a pattern worth acting on, and you can ask for a discount or a credit on the next order. Do not threaten a chargeback in the first message; it usually ends the conversation."
+            ]
+          },
+          {
+            "h2": "Short quantity: count, photograph, then ask",
+            "body": [
+              "Short quantity is the easiest problem to prove if you count on arrival. Count before you sign anything and photograph the open carton with the packing list visible. Then send the count and the photo in one message and ask for the missing units to be sent with your next order or refunded.",
+              "Small shortages of a few units are common and often settled with a credit. Large shortages are worth a formal message with the packing list attached. Either way, do not wait weeks to report it, because the longer you wait the harder it is to prove the shortage happened before delivery."
+            ]
+          },
+          {
+            "h2": "When the messages are not enough",
+            "body": [
+              "If the supplier stops answering or the answers do not match what you agreed, a live call often moves things faster than another email. Renata sits in on live calls with Chinese suppliers and can read and write supplier messages, explain what an answer really means, and help you keep the tone firm but workable. Remote support is 25 EUR per half hour, and on location in the Lisbon area is 45 EUR per hour with a two-hour minimum.",
+              "She is not a sourcing agent. She does not inspect factories, handle samples, arrange freight, clear customs or guarantee a supplier, and she does not do sworn or certified translation. What she does is help you understand and be understood in the conversation, which is often where a stuck complaint starts moving again."
+            ]
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Should I write the complaint in English or Chinese?",
+            "a": "Write it in English with a short Chinese line at the top if you can. Most suppliers have someone who reads English, and the Chinese line gets attention. Keep the Chinese simple and put the English underneath so there is no misunderstanding."
+          },
+          {
+            "q": "How long should I wait before complaining about a late order?",
+            "a": "Complain as soon as the promised ship date has passed without an update. Ask for the current status and a new date in writing. Waiting does not improve the order, and it makes it harder to show that the delay was real."
+          },
+          {
+            "q": "What if the supplier says the wrong product was what I ordered?",
+            "a": "Go back to the proforma invoice, the packing list and the chat where you approved the specification. Send those documents in one message and ask the supplier to compare them with what was shipped. If the documents support you, say so calmly and repeat what you want."
+          },
+          {
+            "q": "Can Renata call the supplier for me?",
+            "a": "Yes, she provides live interpreting and message support between a Portuguese- or English-speaking buyer and a Chinese supplier, by video or WeChat call. Remote support is 25 EUR per half hour. She does not act as a sourcing agent and does not guarantee any supplier outcome."
+          },
+          {
+            "q": "Is HSK 4 enough to handle a complaint?",
+            "a": "HSK 4 is solid everyday and operational business Chinese, which covers most supplier messages and calls. It is not legal, technical or sworn-translation level. For a simple complaint it is usually enough, and for a contract dispute you would need a qualified professional."
+          },
+          {
+            "q": "What should I ask for: refund, replacement or credit?",
+            "a": "Ask for the outcome that costs you least. A replacement is best if you still need the goods. A refund is best if you cannot use them. A credit on the next order is often the fastest to agree, but only accept it if you plan to order again."
+          }
+        ],
+        "target_query": "what to do when a china order arrives wrong",
+        "source": "seed",
+        "silo": "sourcing"
+      }
     }
   ]
 }
